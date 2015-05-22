@@ -61,7 +61,12 @@ inline vector<string> listFile(char *dirname){
 
 
 inline void buildModel(string source) {
+
+
     clock_t read_start = clock();
+
+
+
     int n;
     int m;
     const char *file = source.c_str();
@@ -72,14 +77,19 @@ inline void buildModel(string source) {
         exit(EXIT_FAILURE);
     }
     fin >> n >> m;
-    int matrix[n][m];
+    char matrix[n][m];
     double numberOfPassengerByTrip[m];
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             fin >> matrix[i][j];
-            if (matrix[i][j] != 0) ++numberOfPassengerByTrip[j];
+            if (matrix[i][j] != '0') ++numberOfPassengerByTrip[j];
         }
     }
+
+
+
+
+
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
@@ -88,7 +98,7 @@ inline void buildModel(string source) {
     for (int i = 0; i < n; ++i) {
         result = 0;
         for (int j = 0; j < m; ++j) {
-            if (matrix[i][j] != 0) result += 1/numberOfPassengerByTrip[j];
+            if (matrix[i][j] != '0') result += 1/numberOfPassengerByTrip[j];
         }
         minS[i] = (int)result;
         if (minS[i] == result) {
@@ -97,13 +107,12 @@ inline void buildModel(string source) {
             maxS[i] = minS[i]+1;
         }
     }
-
-    /*
+/*
     for (int i = 0; i < n; ++i) {
         cout << "minS[" << i << "]: " << minS[i]<< "           ";
         cout << "maxS[" << i << "]: " << maxS[i]<< endl;
     }
-     */
+*/
     clock_t sap_start = clock();
     time_calS += diffclock(sap_start,calS_start);
     Sap sap;
@@ -111,7 +120,7 @@ inline void buildModel(string source) {
     for (int i = 0; i < n; ++i) {
         sap.addEdge(0,i+1,minS[i]);
         for (int j = 0; j < m; ++j) {
-            if (matrix[i][j] > 1) {
+            if (matrix[i][j] > '1') {
                 sap.addEdge(i+1,n+1+j,1);
             }
         }
