@@ -1,0 +1,7 @@
+.idea/
+.idea
+*.exe
+*.o
+CMakeLists.*
+.in
+.out
