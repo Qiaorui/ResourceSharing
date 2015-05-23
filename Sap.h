@@ -33,7 +33,7 @@ public:
 
     void coutCapacity();
 
-    void addEdge(int s, int t, int c);
+    void setEdge(int s, int t, int c);
 
 
     void solve();

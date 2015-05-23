@@ -17,7 +17,7 @@ Sap::~Sap() {
     delete[] capacidad;
 }
 
-void Sap::addEdge(int s, int t, int c) {
+void Sap::setEdge(int s, int t, int c) {
     capacidad[s][t] = c;
 }
 
@@ -26,7 +26,7 @@ void Sap::solve() {
 }
 
 int Sap::getMaxFlow() {
-    return 0;
+    return maxFlow;
 }
 
 void Sap::setValue(int n, int m, int s, int t) {

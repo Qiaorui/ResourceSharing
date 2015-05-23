@@ -65,8 +65,6 @@ inline void buildModel(string source) {
 
     clock_t read_start = clock();
 
-
-
     int n;
     int m;
     const char *file = source.c_str();
@@ -78,23 +76,20 @@ inline void buildModel(string source) {
     }
     fin >> n >> m;
     char matrix[n][m];
-    double numberOfPassengerByTrip[m];
+    float numberOfPassengerByTrip[m];
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             fin >> matrix[i][j];
             if (matrix[i][j] != '0') ++numberOfPassengerByTrip[j];
         }
     }
-
-
-
-
+    fin.close();
 
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
     int maxS[n];
-    double result;
+    float result;
     for (int i = 0; i < n; ++i) {
         result = 0;
         for (int j = 0; j < m; ++j) {
@@ -118,17 +113,17 @@ inline void buildModel(string source) {
     Sap sap;
     sap.setValue(n,m,0,n+m+1);
     for (int i = 0; i < n; ++i) {
-        sap.addEdge(0,i+1,minS[i]);
+        sap.setEdge(0,i+1,minS[i]);
         for (int j = 0; j < m; ++j) {
             if (matrix[i][j] > '1') {
-                sap.addEdge(i+1,n+1+j,1);
+                sap.setEdge(i+1,n+1+j,1);
             }
         }
     }
     for (int j = 0; j < m; ++j) {
-        sap.addEdge(n+j+1,n+j+2,1);
+        sap.setEdge(n+j+1,n+m+1,1);
     }
-    fin.close();
+//    sap.coutCapacity();
     time_sap += diffclock(clock(),sap_start);
 }
 
