@@ -18,9 +18,9 @@ private:
     int s;
     int t;
     vector<int> h;
-    int flowPath;
     int *parent;
-    int  **capacidad;
+    int **capacidad;
+    int **flow;
     Matrix neighbour;
 
 public:
@@ -35,7 +35,9 @@ public:
 
     void setEdge(int s, int t, int c);
 
-    void setEdge(int **matrix);
+    int bfs();
+
+    void setEdge(char **matrix, int s[], char key);
 
     void solve();
 

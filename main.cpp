@@ -75,16 +75,22 @@ inline void buildModel(string source) {
         exit(EXIT_FAILURE);
     }
     fin >> n >> m;
-    char matrix[n][m];
+    char **matrix;
+    matrix = new char*[n];
+    for (int i = 0; i < n; ++i) {
+        matrix[i] = new char[m];
+    }
     float numberOfPassengerByTrip[m];
+    memset(numberOfPassengerByTrip,0, sizeof(numberOfPassengerByTrip));
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             fin >> matrix[i][j];
-            if (matrix[i][j] != '0') ++numberOfPassengerByTrip[j];
+            if (matrix[i][j] != '0') {
+                ++numberOfPassengerByTrip[j];
+            }
         }
     }
     fin.close();
-
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
@@ -93,7 +99,9 @@ inline void buildModel(string source) {
     for (int i = 0; i < n; ++i) {
         result = 0;
         for (int j = 0; j < m; ++j) {
-            if (matrix[i][j] != '0') result += 1/numberOfPassengerByTrip[j];
+            if (matrix[i][j] != '0') {
+                result += 1/numberOfPassengerByTrip[j];
+            }
         }
         minS[i] = (int)result;
         if (minS[i] == result) {
@@ -112,6 +120,8 @@ inline void buildModel(string source) {
     time_calS += diffclock(sap_start,calS_start);
     Sap sap;
     sap.setValue(n,m,0,n+m+1);
+    sap.setEdge(matrix, minS, '1');
+    /*
     for (int i = 0; i < n; ++i) {
         sap.setEdge(0,i+1,minS[i]);
         for (int j = 0; j < m; ++j) {
@@ -123,7 +133,13 @@ inline void buildModel(string source) {
     for (int j = 0; j < m; ++j) {
         sap.setEdge(n+j+1,n+m+1,1);
     }
-//    sap.coutCapacity();
+     */
+    sap.solve();
+    cout << "maxflow = " << sap.getMaxFlow() << endl;
+    for (int i = 0; i < n; ++i) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
     time_sap += diffclock(clock(),sap_start);
 }
 
@@ -153,7 +169,7 @@ int main(int argc, char * argv[]) {
         sort(files.begin(),files.end());
     }
     for (int i = 0; i < files.size(); ++i) {
-        //cout << files[i] << endl;
+        cout << files[i] << endl;
         buildModel(dir+files[i]);
     }
 
