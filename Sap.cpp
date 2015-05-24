@@ -15,10 +15,15 @@ Sap::~Sap() {
         delete[] capacidad[i];
     }
     delete[] capacidad;
+    delete[] parent;
 }
 
 void Sap::setEdge(int s, int t, int c) {
     capacidad[s][t] = c;
+}
+
+void setEdge(int **matrix) {
+
 }
 
 void Sap::solve() {
@@ -30,6 +35,7 @@ int Sap::getMaxFlow() {
 }
 
 void Sap::setValue(int n, int m, int s, int t) {
+    maxFlow = 0;
     this->n = n;
     this->m = m;
     this->s = s;
@@ -39,6 +45,8 @@ void Sap::setValue(int n, int m, int s, int t) {
     for (int i = 0; i < totalNode; ++i) {
         capacidad[i] = new int[totalNode];
     }
+    neighbour.resize(totalNode);
+    parent = new int[totalNode];
 }
 
 
