@@ -33,11 +33,13 @@ public:
 
     void coutCapacity();
 
-    void setEdge(int s, int t, int c);
+    void coutAssign();
+
+    void addEdge(int s, int t, int c);
 
     int bfs();
 
-    void setEdge(char **matrix, int s[], char key);
+    int setEdge(char **matrix, int s[], char key);
 
     void solve();
 

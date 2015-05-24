@@ -64,7 +64,7 @@ inline void buildModel(string source) {
 
 
     clock_t read_start = clock();
-
+    char bestCase = 'A';
     int n;
     int m;
     const char *file = source.c_str();
@@ -80,6 +80,8 @@ inline void buildModel(string source) {
     for (int i = 0; i < n; ++i) {
         matrix[i] = new char[m];
     }
+    char majorPreference[m];
+    memset(majorPreference,0, sizeof(majorPreference));
     float numberOfPassengerByTrip[m];
     memset(numberOfPassengerByTrip,0, sizeof(numberOfPassengerByTrip));
     for (int i = 0; i < n; ++i) {
@@ -87,13 +89,39 @@ inline void buildModel(string source) {
             fin >> matrix[i][j];
             if (matrix[i][j] != '0') {
                 ++numberOfPassengerByTrip[j];
+                if (matrix[i][j] == '3' && majorPreference[j] == '3') {
+                    bestCase = 'B';
+                }
+                if (matrix[i][j] > majorPreference[j]) {
+                    majorPreference[j] = matrix[i][j];
+                }
             }
         }
     }
     fin.close();
+    //analisi
+    char minor = '9' ;
+    for (int j = 0; j < m; ++j) {
+        if (majorPreference[j] < minor) {
+            minor = majorPreference[j];
+        }
+    }
+    switch (minor) {
+        case '0':
+            bestCase = 'D';
+            break;
+        case '1':
+            bestCase = 'C';
+            break;
+        default:
+            break;
+    }
+
+    //cout << "This best case will be " << bestCase << endl;
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
+    int sumMin = 0;
     int maxS[n];
     float result;
     for (int i = 0; i < n; ++i) {
@@ -104,6 +132,7 @@ inline void buildModel(string source) {
             }
         }
         minS[i] = (int)result;
+        sumMin += minS[i];
         if (minS[i] == result) {
             maxS[i] = minS[i];
         } else {
@@ -120,7 +149,25 @@ inline void buildModel(string source) {
     time_calS += diffclock(sap_start,calS_start);
     Sap sap;
     sap.setValue(n,m,0,n+m+1);
-    sap.setEdge(matrix, minS, '1');
+    while (bestCase != 'D') {
+        int reserved = sap.setEdge(matrix, minS, bestCase);
+        sap.solve();
+        //cout << "maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved << endl;
+            for (int i = 0; i < n; ++i) {
+                if (maxS[i] != minS[i]) {
+                    sap.addEdge(0,i+1,maxS[i]);
+                }
+            }
+        sap.solve();
+        //cout << "maxflow = " << sap.getMaxFlow() << endl;
+        if (sap.getMaxFlow() + reserved == m) {
+            break;
+        } else {
+            ++bestCase;
+            cout << "lower case into ->" << bestCase << endl;
+        }
+    }
+
     /*
     for (int i = 0; i < n; ++i) {
         sap.setEdge(0,i+1,minS[i]);
@@ -134,8 +181,9 @@ inline void buildModel(string source) {
         sap.setEdge(n+j+1,n+m+1,1);
     }
      */
-    sap.solve();
-    cout << "maxflow = " << sap.getMaxFlow() << endl;
+    cout << bestCase << endl;
+    //sap.coutAssign();
+    //cout << "maxflow = " << sap.getMaxFlow() << endl;
     for (int i = 0; i < n; ++i) {
         delete[] matrix[i];
     }

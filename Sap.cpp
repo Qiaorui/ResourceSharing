@@ -23,27 +23,13 @@ Sap::~Sap() {
     delete[] parent;
 }
 
-void Sap::setEdge(int s, int t, int c) {
-    capacidad[s][t] = c;
+void Sap::addEdge(int s, int t, int c) {
+    capacidad[s][t]++;
 }
 
-void Sap::setEdge(char **matrix, int s[], char key) {
-    for (int i = 0; i < n; ++i) {
-        capacidad[0][i+1] = s[i];
-        flow[0][i+1] = 0;
-        flow[i+1][0] = 0;
-        neighbour[0].push_back(i+1);
-        neighbour[i+1].push_back(0);
-        for (int j = 0; j < m; ++j) {
-            if (matrix[i][j] > key) {
-                capacidad[i+1][n+j+1] = 1;
-                flow[i+1][n+j+1] = 0;
-                flow[n+j+1][i+1] = 0;
-                neighbour[i+1].push_back(n+j+1);
-                neighbour[n+j+1].push_back(i+1);
-            }
-        }
-    }
+int Sap::setEdge(char **matrix, int s[], char key) {
+    maxFlow = 0;
+    int reserved = 0;
     for (int j = 0; j < m; ++j) {
         capacidad[n+j+1][t] = 1;
         flow[n+j+1][t] = 0;
@@ -51,11 +37,52 @@ void Sap::setEdge(char **matrix, int s[], char key) {
         neighbour[n+j+1].push_back(t);
         neighbour[t].push_back(n+j+1);
     }
+    for (int i = 0; i < n; ++i) {
+        capacidad[0][i+1] = s[i];
+        flow[0][i+1] = 0;
+        flow[i+1][0] = 0;
+        neighbour[0].push_back(i+1);
+        neighbour[i+1].push_back(0);
+        for (int j = 0; j < m; ++j) {
+            if (key == 'C') {
+                if (matrix[i][j] > '0') {
+                    capacidad[i+1][n+j+1] = 1;
+                    flow[i+1][n+j+1] = 0;
+                    flow[n+j+1][i+1] = 0;
+                    neighbour[i+1].push_back(n+j+1);
+                    neighbour[n+j+1].push_back(i+1);
+                }
+            } else if (matrix[i][j] > '1') {
+                if (matrix[i][j] == '3' && key == 'A') {
+                    capacidad[i+1][n+j+1] = 1;
+                    flow[0][i+1] = 1;
+                    flow[i+1][0] = -1;
+                    flow[i+1][n+j+1] = 1;
+                    flow[n+j+1][i+1] = -1;
+                    flow[n+j+1][t] = 1;
+                    flow[t][n+j+1] = -1;
+                    ++reserved;
+                } else {
+                    capacidad[i+1][n+j+1] = 1;
+                    flow[i+1][n+j+1] = 0;
+                    flow[n+j+1][i+1] = 0;
+                    neighbour[i+1].push_back(n+j+1);
+                    neighbour[n+j+1].push_back(i+1);
+                }
+            }
+        }
+    }
+
+    return reserved;
 
 }
 
 
 int Sap::bfs() {
+
+
+
+
     for (int i = 0; i < totalNode; ++i) {
         parent[i] = -1;
     }
@@ -92,32 +119,6 @@ int Sap::bfs() {
 void Sap::solve() {
     int f,u,v;
     h.assign(totalNode,0);
-    /*
-    cout << "solving problem......." << endl;
-    cout << "Capacity:"<< endl;
-    for (int i = 0; i < totalNode; ++i) {
-        for (int j = 0; j < totalNode; ++j) {
-            cout << capacidad[i][j] << "  ";
-        }
-        cout << endl;
-    }
-    cout << "Neighbour:" << endl;
-    for (int i = 0; i < neighbour.size(); ++i) {
-        cout << "neighbour[" << i << "]: ";
-        for (int j = 0; j < neighbour[i].size(); ++j) {
-            cout << neighbour[i][j] << "  ";
-        }
-        cout << endl;
-    }
-    cout << "Flow:"<< endl;
-    for (int i = 0; i < totalNode; ++i) {
-        for (int j = 0; j < totalNode; ++j) {
-            cout << flow[i][j] << "  ";
-        }
-        cout << endl;
-    }
-     */
-
     while(true) {
         f = bfs();
         //cout << "f->" << f << endl;
@@ -136,12 +137,11 @@ void Sap::solve() {
 }
 
 int Sap::getMaxFlow() {
-    cout << "maxH:" << h[t] << endl;
+    //cout << "maxH:" << h[t] << endl;
     return maxFlow;
 }
 
 void Sap::setValue(int n, int m, int s, int t) {
-    maxFlow = 0;
     this->n = n;
     this->m = m;
     this->s = s;
@@ -151,17 +151,18 @@ void Sap::setValue(int n, int m, int s, int t) {
     for (int i = 0; i < totalNode; ++i) {
         capacidad[i] = new int[totalNode];
     }
-
+/*
     for (int i = 0; i < totalNode; ++i) {
         for (int j = 0; j < totalNode; ++j) {
             capacidad[i][j] = 0;
         }
     }
-
+*/
     flow = new int*[totalNode];
     for (int i = 0; i < totalNode; ++i) {
         flow[i] = new int[totalNode];
     }
+
     for (int i = 0; i < totalNode; ++i) {
         for (int j = 0; j < totalNode; ++j) {
             flow[i][j] = 0;
@@ -173,6 +174,18 @@ void Sap::setValue(int n, int m, int s, int t) {
 }
 
 
+void Sap::coutAssign() {
+    bool find = false;
+    for (int j = 0; j < m; ++j) {
+        for (int i = 0; i < n; ++i) {
+            if (flow[i+1][n+j+1] > 0) {
+                cout << i << " ";
+                break;
+            }
+        }
+    }
+    cout << endl;
+}
 
 void Sap::coutCapacity() {
 
