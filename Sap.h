@@ -35,6 +35,8 @@ public:
 
     void coutAssign();
 
+    bool isCorrect(int minS[], int maxS[], char **matrix, char key);
+
     void addEdge(int s, int t, int c);
 
     int bfs();

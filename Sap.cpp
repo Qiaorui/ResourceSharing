@@ -197,3 +197,31 @@ void Sap::coutCapacity() {
     }
 
 }
+
+
+bool Sap::isCorrect(int minS[], int maxS[], char **matrix, char key) {
+    //checking if A get all his preference
+    if (key == 'A') {
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (matrix[i][j] == '3' && flow[i+1][n+j+1] != 1) {
+                    cout << "Fatal: matrix[" << i << "][" << j << "] = 3 and flow["<< i+1 << "][" << n+j+1 << "] =" << flow[i+1][n+j+1] << endl;
+                    return false;
+                }
+            }
+        }
+    }
+
+
+    //checking if each user has minS and maxS correct
+
+    for (int i = 0; i < n; ++i) {
+        if (flow[0][i+1] > maxS[i] || flow[0][i+1] < minS[i]) {
+            cout << "Fatal: flow[0][" << i+1 << "] =" <<  flow[0][i+1] << "    when min="<< minS[i] << "   max=" << maxS[i] << endl;
+            return false;
+        }
+    }
+
+
+    return true;
+}
