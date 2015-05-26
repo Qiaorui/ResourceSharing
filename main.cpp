@@ -108,6 +108,7 @@ inline void buildModel(string source) {
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
+    int debt = 0;
     int sumMin = 0;
     int maxS[n];
     float result;
@@ -127,6 +128,9 @@ inline void buildModel(string source) {
         }
         if (sumPreference[i] > maxS[i]) {
             bestCase = 'B';
+        }
+        if (sumPreference[i] > minS[i]) {
+            debt += sumPreference[i] - minS[i];
         }
     }
     //analisi
@@ -163,7 +167,19 @@ inline void buildModel(string source) {
     while (bestCase != 'D') {
         int reserved = sap.setEdge(matrix, minS, bestCase);
         sap.solve();
+        // Checking using sumMin!!!!
         cout << "maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved << endl;
+        if (bestCase == 'A' && sumMin > sap.getMaxFlow() + reserved - debt) {
+            cout << "NOT EQUAL" << endl;
+            ++bestCase;
+            continue;
+        }
+        if (bestCase != 'A' && sumMin != sap.getMaxFlow() + reserved) {
+            cout << "error" << endl;
+            ++bestCase;
+            continue;
+        }
+
             for (int i = 0; i < n; ++i) {
                 if (maxS[i] != minS[i]) {
                     sap.addEdge(0,i+1,maxS[i]);
@@ -234,7 +250,6 @@ int main(int argc, char * argv[]) {
         cout << files[i] << endl;
         buildModel(dir+files[i]);
     }
-
     time_total = diffclock(clock(),start);
     cout << "time for read input:   " << time_read << " ms      ratio:" << time_read/time_total*100 << "%" << endl;
     cout << "time for calc S:   " << time_calS << " ms      ratio:" << time_calS/time_total*100 << "%" << endl;

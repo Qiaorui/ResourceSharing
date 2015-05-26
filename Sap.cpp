@@ -24,7 +24,7 @@ Sap::~Sap() {
 }
 
 void Sap::addEdge(int s, int t, int c) {
-    capacidad[s][t]++;
+    capacidad[s][t] = c;
 }
 
 int Sap::setEdge(char **matrix, int s[], char key) {
@@ -55,12 +55,15 @@ int Sap::setEdge(char **matrix, int s[], char key) {
             } else if (matrix[i][j] > '1') {
                 if (matrix[i][j] == '3' && key == 'A') {
                     capacidad[i+1][n+j+1] = 1;
+                    //capacidad[0][i+1]--;
                     flow[0][i+1] = 1;
                     flow[i+1][0] = -1;
                     flow[i+1][n+j+1] = 1;
                     flow[n+j+1][i+1] = -1;
                     flow[n+j+1][t] = 1;
                     flow[t][n+j+1] = -1;
+                    //neighbour[i+1].push_back(n+j+1);
+                    //neighbour[n+j+1].push_back(i+1);
                     ++reserved;
                 } else {
                     capacidad[i+1][n+j+1] = 1;

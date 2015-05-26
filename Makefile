@@ -19,4 +19,4 @@ test_small:
 	./main.exe -dir smallTest
 
 clean : 
-	rm -f *.o main.exe
+	rm -f *.o main.exe *~
