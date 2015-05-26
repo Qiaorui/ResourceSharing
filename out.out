@@ -1439,7 +1439,7 @@ instance_100_500_9_8_8.txt
 A
 instance_100_500_9_8_9.txt
 B
-time for read input:   737.566 ms      ratio:0.687858%
-time for calc S:   225.167 ms      ratio:0.209992%
-time for sap algoritm:   106072 ms      ratio:98.9237%
-time total:   107226 ms
+time for read input:   740.03 ms      ratio:0.897788%
+time for calc S:   214.989 ms      ratio:0.26082%
+time for sap algoritm:   81280 ms      ratio:98.6072%
+time total:   82428.1 ms

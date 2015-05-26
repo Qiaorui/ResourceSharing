@@ -17,7 +17,7 @@ private:
     int maxFlow;
     int s;
     int t;
-    vector<int> h;
+    //vector<int> h;
     int *parent;
     int **capacidad;
     int **flow;
@@ -47,6 +47,7 @@ public:
 
     int getMaxFlow();
 
+    bool filled();
 
 
 };

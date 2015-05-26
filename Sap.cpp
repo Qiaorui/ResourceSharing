@@ -101,7 +101,7 @@ int Sap::bfs() {
         q.pop();
         for (int i = 0; i < neighbour[u].size(); ++i) {
             int v = neighbour[u][i];
-            if (h[u]+1 > h[v]) h[v] = h[u]+1;
+            //if (h[u]+1 > h[v]) h[v] = h[u]+1;
             //cout << "v->" << v <<  "  R->" << capacidad[u][v] - flow[u][v] << "    P->" << parent[v] <<endl;
             if (capacidad[u][v] - flow[u][v] > 0 && parent[v] == -1) {
                 parent[v] = u;
@@ -121,7 +121,7 @@ int Sap::bfs() {
 
 void Sap::solve() {
     int f,u,v;
-    h.assign(totalNode,0);
+    //h.assign(totalNode,0);
     while(true) {
         f = bfs();
         //cout << "f->" << f << endl;
@@ -226,5 +226,14 @@ bool Sap::isCorrect(int minS[], int maxS[], char **matrix, char key) {
     }
 
 
+    return true;
+}
+
+bool Sap::filled() {
+    for (int i = 0; i < n; ++i) {
+        if (capacidad[0][i+1] - flow[0][i+1] > 0) {
+            return false;
+        }
+    }
     return true;
 }

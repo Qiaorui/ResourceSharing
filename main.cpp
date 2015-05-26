@@ -81,7 +81,7 @@ inline void buildModel(string source) {
         matrix[i] = new char[m];
     }
     char majorPreference[m];
-    memset(majorPreference,0, sizeof(majorPreference));
+    memset(majorPreference, '0', sizeof(majorPreference));
     float numberOfPassengerByTrip[m];
     memset(numberOfPassengerByTrip,0, sizeof(numberOfPassengerByTrip));
     int sumPreference[n];
@@ -89,6 +89,7 @@ inline void buildModel(string source) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             fin >> matrix[i][j];
+            //cout << matrix[i][j] << " ";
             if (matrix[i][j] != '0') {
                 ++numberOfPassengerByTrip[j];
                 if (bestCase == 'A' && matrix[i][j] == '3') {
@@ -102,14 +103,15 @@ inline void buildModel(string source) {
                 }
             }
         }
+        //cout << endl;
     }
     fin.close();
 
     clock_t calS_start = clock();
     time_read += diffclock(calS_start,read_start);
     int minS[n];
-    int debt = 0;
-    int sumMin = 0;
+    //int debt = 0;
+    //int sumMin = 0;
     int maxS[n];
     float result;
     for (int i = 0; i < n; ++i) {
@@ -120,7 +122,7 @@ inline void buildModel(string source) {
             }
         }
         minS[i] = (int)result;
-        sumMin += minS[i];
+        //sumMin += minS[i];
         if (minS[i] == result) {
             maxS[i] = minS[i];
         } else {
@@ -129,9 +131,9 @@ inline void buildModel(string source) {
         if (sumPreference[i] > maxS[i]) {
             bestCase = 'B';
         }
-        if (sumPreference[i] > minS[i]) {
+        /*if (sumPreference[i] > minS[i]) {
             debt += sumPreference[i] - minS[i];
-        }
+        }*/
     }
     //analisi
     char minor = '9' ;
@@ -140,18 +142,13 @@ inline void buildModel(string source) {
             minor = majorPreference[j];
         }
     }
-    switch (minor) {
-        case '0':
-            bestCase = 'D';
-            break;
-        case '1':
-            bestCase = 'C';
-            break;
-        default:
-            break;
+    //cout << "minor = " << minor;
+    if (minor == '0') {
+        bestCase = 'D';
+    } else if (minor == '1') {
+        bestCase = 'C';
     }
-
-    cout << "This best case will be " << bestCase << endl;
+    //cout << "This best case will be " << bestCase << endl;
 
 
 /*
@@ -167,8 +164,8 @@ inline void buildModel(string source) {
     while (bestCase != 'D') {
         int reserved = sap.setEdge(matrix, minS, bestCase);
         sap.solve();
-        // Checking using sumMin!!!!
-        cout << "maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved << endl;
+        /*
+        cout << "bestcase = " << bestCase << "   sumMin=" << sumMin << "    maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved  << "  debt=" << debt<< endl;
         if (bestCase == 'A' && sumMin > sap.getMaxFlow() + reserved - debt) {
             cout << "NOT EQUAL" << endl;
             ++bestCase;
@@ -179,14 +176,19 @@ inline void buildModel(string source) {
             ++bestCase;
             continue;
         }
-
-            for (int i = 0; i < n; ++i) {
-                if (maxS[i] != minS[i]) {
-                    sap.addEdge(0,i+1,maxS[i]);
-                }
+         */
+        if (!sap.filled()) {
+            ++bestCase;
+            cout << "lower case into ->" << bestCase << endl;
+            continue;
+        }
+        for (int i = 0; i < n; ++i) {
+            if (maxS[i] != minS[i]) {
+                sap.addEdge(0,i+1,maxS[i]);
             }
+        }
         sap.solve();
-        cout << "maxflow = " << sap.getMaxFlow() << endl;
+        //cout << "maxflow = " << sap.getMaxFlow() << endl;
         if (sap.getMaxFlow() + reserved == m) {
             break;
         } else {
@@ -207,10 +209,14 @@ inline void buildModel(string source) {
         sap.setEdge(n+j+1,n+m+1,1);
     }
      */
-    if (!sap.isCorrect(minS, maxS, matrix, bestCase)) {
-        cout << "Wrong!" << endl;
-        exit(1);
-    } else cout << "checked" << endl;
+    /*
+    if (bestCase != 'D') {
+        if (!sap.isCorrect(minS, maxS, matrix, bestCase)) {
+            cout << "Wrong!" << endl;
+            exit(1);
+        } else cout << "checked" << endl;
+    }
+     */
     cout << bestCase << endl;
     //sap.coutAssign();
     //cout << "maxflow = " << sap.getMaxFlow() << endl;
