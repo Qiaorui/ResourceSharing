@@ -8,15 +8,20 @@
 > make clean
 
 ### Run
-> main.exe [-file  file_name | -dir directory_name | -input]
+> main.exe [-sap | -pre] [-file  file_name | -dir directory_name | -benchmark]
 
+* -sap: using sap algorithm
+* -pre: using preflow algorithm
 * -file: you can read input data from file
 * -dir:  you can read input data from each file of directory
-* -input: you can read input data with standard input stream
+* -benchmark: run benchmark testing using default files
 
 ### Test
 > make test
 >> you will test with default input.in
 
-> make test_dir
->> you will test with benchmark
+> make test_benchmark_sap
+>> you will test with benchmark with sap algorithm
+
+> make test_benchmark_pre
+>> you will test with benchmark with preflow push relabel algorithm

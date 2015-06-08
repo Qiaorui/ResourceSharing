@@ -1,16 +1,13 @@
 all: main.exe
 
-main.exe: main.o Sap.o Isap.o Preflow.o
-	g++ -o main.exe main.o Sap.o Isap.o Preflow.o
+main.exe: main.o Sap.o Preflow.o
+	g++ -o main.exe main.o Sap.o Preflow.o
 
 main.o: main.cpp
 	g++ -c main.cpp
 	
 Sap.o: Sap.cpp
 	g++ -c Sap.cpp
-
-Isap.o: Isap.cpp
-	g++ -c Isap.cpp
 
 Preflow.o: Preflow.cpp
 	g++ -c Preflow.cpp
