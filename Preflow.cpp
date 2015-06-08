@@ -6,6 +6,7 @@
 #include <string.h>
 #include "Preflow.h"
 
+
 Preflow::Preflow(int n, int m, int s, int t) {
     this->n = n;
     this->m = m;
@@ -59,8 +60,6 @@ Preflow::~Preflow() {
 }
 
 
-
-
 inline void Preflow::initPreflow() {
 
     int c;
@@ -80,7 +79,7 @@ inline void Preflow::initPreflow() {
 
 
 
-inline void Preflow::push(int u, int v) {
+ void Preflow::push(int u, int v) {
     int f = min(e[u], capacidad[u][v] - flow[u][v]);
 
     //cout << "push: " << u << " to " << v << "   flow:" << f << endl;
@@ -91,11 +90,11 @@ inline void Preflow::push(int u, int v) {
 
 }
 
-inline bool Preflow::relable(int u) {
+bool Preflow::relable(int u) {
     int height = INF;
     for (int i = 0; i < neighbour[u].size(); ++i) {
         int v = neighbour[u][i];
-        if (h[v] < height && capacidad[u][v]-flow[u][v]>0) {
+        if (h[v] < height && capacidad[u][v]>flow[u][v]) {
             height = h[v];
         }
     }
@@ -115,27 +114,23 @@ void Preflow::solve() {
     bool inQueue[totalNode];
     memset(inQueue,false,sizeof(inQueue));
     int u,v;
-    bool canPush;
     initPreflow();
     for (int i = 1; i < n+1; ++i) {
         if (e[i]> 0) {
             activeNode.push(i);
             inQueue[i] = true;
         }
-
     }
+    inQueue[s] = inQueue[t] = true;
     while (!activeNode.empty()) {
         u = activeNode.front();
         //cout << u << " -> " << endl;
-        canPush = false;
-
         for (int i = 0; i < neighbour[u].size() && e[u]>0; ++i) {
             v = neighbour[u][i];
             //cout << v << " r:" << capacidad[u][v]-flow[u][v] << "  h[" << v << "]: " << h[v] << "  e[" << u << "]:" << e[u] << endl;
-            if (capacidad[u][v]>flow[u][v] && h[u]==h[v]+1 && e[u]>0){
+            if (capacidad[u][v]>flow[u][v] && h[u]==h[v]+1){
                 push(u,v);
-                canPush = true;
-                if (e[v]>0 && v != s && v != t && !inQueue[v]) {
+                if (e[v]>0 && !inQueue[v]) {
                     activeNode.push(v);
                     inQueue[v] = true;
                 }
@@ -145,7 +140,7 @@ void Preflow::solve() {
                 }
             }
         }
-        if (!canPush) {
+        if (e[u]>0) {
             if (!relable(u)){
                 break;
             }

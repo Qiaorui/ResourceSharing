@@ -309,9 +309,10 @@ inline void buildPreflowModel(string source) {
         cout << "maxS[" << i << "]: " << maxS[i]<< endl;
     }
 */
+
+    Preflow preflow(n,m,0,n+m+1);
     clock_t sap_start = clock();
     time_calS += diffclock(sap_start,calS_start);
-    Preflow preflow(n,m,0,n+m+1);
     while (bestCase != 'D') {
         int reserved = preflow.setEdge(matrix, minS, bestCase);
         for (int i = 0; i < n; ++i) {
