@@ -1,1440 +1,793 @@
-instance_100_500_2_0_1.txt
-A
-instance_100_500_2_0_10.txt
-A
-instance_100_500_2_0_2.txt
-A
-instance_100_500_2_0_3.txt
-A
-instance_100_500_2_0_4.txt
-A
-instance_100_500_2_0_5.txt
-A
-instance_100_500_2_0_6.txt
-A
-instance_100_500_2_0_7.txt
-A
-instance_100_500_2_0_8.txt
-A
-instance_100_500_2_0_9.txt
-A
-instance_100_500_2_1_1.txt
-A
-instance_100_500_2_1_10.txt
-A
-instance_100_500_2_1_2.txt
-A
-instance_100_500_2_1_3.txt
-A
-instance_100_500_2_1_4.txt
-A
-instance_100_500_2_1_5.txt
-A
-instance_100_500_2_1_6.txt
-A
-instance_100_500_2_1_7.txt
-A
-instance_100_500_2_1_8.txt
-A
-instance_100_500_2_1_9.txt
-A
-instance_100_500_2_2_1.txt
-A
-instance_100_500_2_2_10.txt
-A
-instance_100_500_2_2_2.txt
-A
-instance_100_500_2_2_3.txt
-A
-instance_100_500_2_2_4.txt
-A
-instance_100_500_2_2_5.txt
-A
-instance_100_500_2_2_6.txt
-A
-instance_100_500_2_2_7.txt
-A
-instance_100_500_2_2_8.txt
-A
-instance_100_500_2_2_9.txt
-A
-instance_100_500_2_3_1.txt
-A
-instance_100_500_2_3_10.txt
-A
-instance_100_500_2_3_2.txt
-A
-instance_100_500_2_3_3.txt
-A
-instance_100_500_2_3_4.txt
-A
-instance_100_500_2_3_5.txt
-A
-instance_100_500_2_3_6.txt
-A
-instance_100_500_2_3_7.txt
-A
-instance_100_500_2_3_8.txt
-A
-instance_100_500_2_3_9.txt
-A
-instance_100_500_2_4_1.txt
-A
-instance_100_500_2_4_10.txt
-A
-instance_100_500_2_4_2.txt
-A
-instance_100_500_2_4_3.txt
-A
-instance_100_500_2_4_4.txt
-A
-instance_100_500_2_4_5.txt
-A
-instance_100_500_2_4_6.txt
-A
-instance_100_500_2_4_7.txt
-A
-instance_100_500_2_4_8.txt
-A
-instance_100_500_2_4_9.txt
-A
-instance_100_500_2_5_1.txt
-A
-instance_100_500_2_5_10.txt
-A
-instance_100_500_2_5_2.txt
-A
-instance_100_500_2_5_3.txt
-A
-instance_100_500_2_5_4.txt
-A
-instance_100_500_2_5_5.txt
-A
-instance_100_500_2_5_6.txt
-A
-instance_100_500_2_5_7.txt
-A
-instance_100_500_2_5_8.txt
-A
-instance_100_500_2_5_9.txt
-A
-instance_100_500_2_6_1.txt
-A
-instance_100_500_2_6_10.txt
-A
-instance_100_500_2_6_2.txt
-A
-instance_100_500_2_6_3.txt
-C
-instance_100_500_2_6_4.txt
-A
-instance_100_500_2_6_5.txt
-A
-instance_100_500_2_6_6.txt
-A
-instance_100_500_2_6_7.txt
-A
-instance_100_500_2_6_8.txt
-A
-instance_100_500_2_6_9.txt
-A
-instance_100_500_2_7_1.txt
-C
-instance_100_500_2_7_10.txt
-C
-instance_100_500_2_7_2.txt
-A
-instance_100_500_2_7_3.txt
-A
-instance_100_500_2_7_4.txt
-A
-instance_100_500_2_7_5.txt
-C
-instance_100_500_2_7_6.txt
-C
-instance_100_500_2_7_7.txt
-C
-instance_100_500_2_7_8.txt
-C
-instance_100_500_2_7_9.txt
-C
-instance_100_500_2_8_1.txt
-C
-instance_100_500_2_8_10.txt
-C
-instance_100_500_2_8_2.txt
-C
-instance_100_500_2_8_3.txt
-C
-instance_100_500_2_8_4.txt
-C
-instance_100_500_2_8_5.txt
-C
-instance_100_500_2_8_6.txt
-C
-instance_100_500_2_8_7.txt
-C
-instance_100_500_2_8_8.txt
-C
-instance_100_500_2_8_9.txt
-C
-instance_100_500_3_0_1.txt
-A
-instance_100_500_3_0_10.txt
-A
-instance_100_500_3_0_2.txt
-A
-instance_100_500_3_0_3.txt
-A
-instance_100_500_3_0_4.txt
-A
-instance_100_500_3_0_5.txt
-A
-instance_100_500_3_0_6.txt
-A
-instance_100_500_3_0_7.txt
-A
-instance_100_500_3_0_8.txt
-A
-instance_100_500_3_0_9.txt
-A
-instance_100_500_3_1_1.txt
-A
-instance_100_500_3_1_10.txt
-A
-instance_100_500_3_1_2.txt
-A
-instance_100_500_3_1_3.txt
-A
-instance_100_500_3_1_4.txt
-A
-instance_100_500_3_1_5.txt
-A
-instance_100_500_3_1_6.txt
-A
-instance_100_500_3_1_7.txt
-A
-instance_100_500_3_1_8.txt
-A
-instance_100_500_3_1_9.txt
-A
-instance_100_500_3_2_1.txt
-A
-instance_100_500_3_2_10.txt
-A
-instance_100_500_3_2_2.txt
-A
-instance_100_500_3_2_3.txt
-A
-instance_100_500_3_2_4.txt
-A
-instance_100_500_3_2_5.txt
-A
-instance_100_500_3_2_6.txt
-A
-instance_100_500_3_2_7.txt
-A
-instance_100_500_3_2_8.txt
-B
-instance_100_500_3_2_9.txt
-A
-instance_100_500_3_3_1.txt
-A
-instance_100_500_3_3_10.txt
-A
-instance_100_500_3_3_2.txt
-A
-instance_100_500_3_3_3.txt
-A
-instance_100_500_3_3_4.txt
-A
-instance_100_500_3_3_5.txt
-A
-instance_100_500_3_3_6.txt
-A
-instance_100_500_3_3_7.txt
-A
-instance_100_500_3_3_8.txt
-A
-instance_100_500_3_3_9.txt
-A
-instance_100_500_3_4_1.txt
-A
-instance_100_500_3_4_10.txt
-A
-instance_100_500_3_4_2.txt
-A
-instance_100_500_3_4_3.txt
-A
-instance_100_500_3_4_4.txt
-A
-instance_100_500_3_4_5.txt
-A
-instance_100_500_3_4_6.txt
-A
-instance_100_500_3_4_7.txt
-A
-instance_100_500_3_4_8.txt
-A
-instance_100_500_3_4_9.txt
-A
-instance_100_500_3_5_1.txt
-A
-instance_100_500_3_5_10.txt
-A
-instance_100_500_3_5_2.txt
-A
-instance_100_500_3_5_3.txt
-A
-instance_100_500_3_5_4.txt
-A
-instance_100_500_3_5_5.txt
-B
-instance_100_500_3_5_6.txt
-A
-instance_100_500_3_5_7.txt
-A
-instance_100_500_3_5_8.txt
-B
-instance_100_500_3_5_9.txt
-A
-instance_100_500_3_6_1.txt
-A
-instance_100_500_3_6_10.txt
-A
-instance_100_500_3_6_2.txt
-A
-instance_100_500_3_6_3.txt
-A
-instance_100_500_3_6_4.txt
-A
-instance_100_500_3_6_5.txt
-A
-instance_100_500_3_6_6.txt
-A
-instance_100_500_3_6_7.txt
-A
-instance_100_500_3_6_8.txt
-A
-instance_100_500_3_6_9.txt
-A
-instance_100_500_3_7_1.txt
-A
-instance_100_500_3_7_10.txt
-A
-instance_100_500_3_7_2.txt
-A
-instance_100_500_3_7_3.txt
-A
-instance_100_500_3_7_4.txt
-A
-instance_100_500_3_7_5.txt
-A
-instance_100_500_3_7_6.txt
-A
-instance_100_500_3_7_7.txt
-A
-instance_100_500_3_7_8.txt
-A
-instance_100_500_3_7_9.txt
-A
-instance_100_500_3_8_1.txt
-C
-instance_100_500_3_8_10.txt
-A
-instance_100_500_3_8_2.txt
-C
-instance_100_500_3_8_3.txt
-A
-instance_100_500_3_8_4.txt
-A
-instance_100_500_3_8_5.txt
-C
-instance_100_500_3_8_6.txt
-A
-instance_100_500_3_8_7.txt
-C
-instance_100_500_3_8_8.txt
-C
-instance_100_500_3_8_9.txt
-C
-instance_100_500_4_0_1.txt
-A
-instance_100_500_4_0_10.txt
-A
-instance_100_500_4_0_2.txt
-A
-instance_100_500_4_0_3.txt
-A
-instance_100_500_4_0_4.txt
-A
-instance_100_500_4_0_5.txt
-A
-instance_100_500_4_0_6.txt
-A
-instance_100_500_4_0_7.txt
-A
-instance_100_500_4_0_8.txt
-A
-instance_100_500_4_0_9.txt
-A
-instance_100_500_4_1_1.txt
-A
-instance_100_500_4_1_10.txt
-A
-instance_100_500_4_1_2.txt
-A
-instance_100_500_4_1_3.txt
-A
-instance_100_500_4_1_4.txt
-A
-instance_100_500_4_1_5.txt
-A
-instance_100_500_4_1_6.txt
-A
-instance_100_500_4_1_7.txt
-A
-instance_100_500_4_1_8.txt
-A
-instance_100_500_4_1_9.txt
-A
-instance_100_500_4_2_1.txt
-A
-instance_100_500_4_2_10.txt
-A
-instance_100_500_4_2_2.txt
-A
-instance_100_500_4_2_3.txt
-A
-instance_100_500_4_2_4.txt
-A
-instance_100_500_4_2_5.txt
-A
-instance_100_500_4_2_6.txt
-A
-instance_100_500_4_2_7.txt
-A
-instance_100_500_4_2_8.txt
-A
-instance_100_500_4_2_9.txt
-A
-instance_100_500_4_3_1.txt
-A
-instance_100_500_4_3_10.txt
-A
-instance_100_500_4_3_2.txt
-A
-instance_100_500_4_3_3.txt
-A
-instance_100_500_4_3_4.txt
-A
-instance_100_500_4_3_5.txt
-A
-instance_100_500_4_3_6.txt
-A
-instance_100_500_4_3_7.txt
-A
-instance_100_500_4_3_8.txt
-A
-instance_100_500_4_3_9.txt
-A
-instance_100_500_4_4_1.txt
-A
-instance_100_500_4_4_10.txt
-A
-instance_100_500_4_4_2.txt
-A
-instance_100_500_4_4_3.txt
-A
-instance_100_500_4_4_4.txt
-A
-instance_100_500_4_4_5.txt
-B
-instance_100_500_4_4_6.txt
-A
-instance_100_500_4_4_7.txt
-A
-instance_100_500_4_4_8.txt
-A
-instance_100_500_4_4_9.txt
-A
-instance_100_500_4_5_1.txt
-B
-instance_100_500_4_5_10.txt
-A
-instance_100_500_4_5_2.txt
-A
-instance_100_500_4_5_3.txt
-A
-instance_100_500_4_5_4.txt
-A
-instance_100_500_4_5_5.txt
-A
-instance_100_500_4_5_6.txt
-A
-instance_100_500_4_5_7.txt
-A
-instance_100_500_4_5_8.txt
-A
-instance_100_500_4_5_9.txt
-A
-instance_100_500_4_6_1.txt
-B
-instance_100_500_4_6_10.txt
-A
-instance_100_500_4_6_2.txt
-B
-instance_100_500_4_6_3.txt
-A
-instance_100_500_4_6_4.txt
-A
-instance_100_500_4_6_5.txt
-B
-instance_100_500_4_6_6.txt
-A
-instance_100_500_4_6_7.txt
-A
-instance_100_500_4_6_8.txt
-A
-instance_100_500_4_6_9.txt
-A
-instance_100_500_4_7_1.txt
-B
-instance_100_500_4_7_10.txt
-A
-instance_100_500_4_7_2.txt
-A
-instance_100_500_4_7_3.txt
-A
-instance_100_500_4_7_4.txt
-A
-instance_100_500_4_7_5.txt
-B
-instance_100_500_4_7_6.txt
-A
-instance_100_500_4_7_7.txt
-A
-instance_100_500_4_7_8.txt
-A
-instance_100_500_4_7_9.txt
-A
-instance_100_500_4_8_1.txt
-A
-instance_100_500_4_8_10.txt
-A
-instance_100_500_4_8_2.txt
-C
-instance_100_500_4_8_3.txt
-A
-instance_100_500_4_8_4.txt
-A
-instance_100_500_4_8_5.txt
-C
-instance_100_500_4_8_6.txt
-A
-instance_100_500_4_8_7.txt
-A
-instance_100_500_4_8_8.txt
-A
-instance_100_500_4_8_9.txt
-A
-instance_100_500_5_0_1.txt
-A
-instance_100_500_5_0_10.txt
-A
-instance_100_500_5_0_2.txt
-A
-instance_100_500_5_0_3.txt
-A
-instance_100_500_5_0_4.txt
-A
-instance_100_500_5_0_5.txt
-A
-instance_100_500_5_0_6.txt
-A
-instance_100_500_5_0_7.txt
-A
-instance_100_500_5_0_8.txt
-A
-instance_100_500_5_0_9.txt
-A
-instance_100_500_5_1_1.txt
-A
-instance_100_500_5_1_10.txt
-A
-instance_100_500_5_1_2.txt
-A
-instance_100_500_5_1_3.txt
-A
-instance_100_500_5_1_4.txt
-A
-instance_100_500_5_1_5.txt
-A
-instance_100_500_5_1_6.txt
-A
-instance_100_500_5_1_7.txt
-A
-instance_100_500_5_1_8.txt
-A
-instance_100_500_5_1_9.txt
-A
-instance_100_500_5_2_1.txt
-A
-instance_100_500_5_2_10.txt
-A
-instance_100_500_5_2_2.txt
-A
-instance_100_500_5_2_3.txt
-A
-instance_100_500_5_2_4.txt
-A
-instance_100_500_5_2_5.txt
-A
-instance_100_500_5_2_6.txt
-A
-instance_100_500_5_2_7.txt
-A
-instance_100_500_5_2_8.txt
-A
-instance_100_500_5_2_9.txt
-A
-instance_100_500_5_3_1.txt
-A
-instance_100_500_5_3_10.txt
-A
-instance_100_500_5_3_2.txt
-A
-instance_100_500_5_3_3.txt
-B
-instance_100_500_5_3_4.txt
-A
-instance_100_500_5_3_5.txt
-A
-instance_100_500_5_3_6.txt
-A
-instance_100_500_5_3_7.txt
-A
-instance_100_500_5_3_8.txt
-A
-instance_100_500_5_3_9.txt
-A
-instance_100_500_5_4_1.txt
-A
-instance_100_500_5_4_10.txt
-A
-instance_100_500_5_4_2.txt
-A
-instance_100_500_5_4_3.txt
-A
-instance_100_500_5_4_4.txt
-A
-instance_100_500_5_4_5.txt
-A
-instance_100_500_5_4_6.txt
-A
-instance_100_500_5_4_7.txt
-A
-instance_100_500_5_4_8.txt
-A
-instance_100_500_5_4_9.txt
-A
-instance_100_500_5_5_1.txt
-A
-instance_100_500_5_5_10.txt
-B
-instance_100_500_5_5_2.txt
-A
-instance_100_500_5_5_3.txt
-A
-instance_100_500_5_5_4.txt
-A
-instance_100_500_5_5_5.txt
-A
-instance_100_500_5_5_6.txt
-B
-instance_100_500_5_5_7.txt
-A
-instance_100_500_5_5_8.txt
-A
-instance_100_500_5_5_9.txt
-A
-instance_100_500_5_6_1.txt
-A
-instance_100_500_5_6_10.txt
-B
-instance_100_500_5_6_2.txt
-A
-instance_100_500_5_6_3.txt
-A
-instance_100_500_5_6_4.txt
-A
-instance_100_500_5_6_5.txt
-A
-instance_100_500_5_6_6.txt
-A
-instance_100_500_5_6_7.txt
-A
-instance_100_500_5_6_8.txt
-B
-instance_100_500_5_6_9.txt
-A
-instance_100_500_5_7_1.txt
-A
-instance_100_500_5_7_10.txt
-A
-instance_100_500_5_7_2.txt
-B
-instance_100_500_5_7_3.txt
-B
-instance_100_500_5_7_4.txt
-A
-instance_100_500_5_7_5.txt
-A
-instance_100_500_5_7_6.txt
-A
-instance_100_500_5_7_7.txt
-B
-instance_100_500_5_7_8.txt
-A
-instance_100_500_5_7_9.txt
-B
-instance_100_500_5_8_1.txt
-A
-instance_100_500_5_8_10.txt
-B
-instance_100_500_5_8_2.txt
-A
-instance_100_500_5_8_3.txt
-A
-instance_100_500_5_8_4.txt
-A
-instance_100_500_5_8_5.txt
-A
-instance_100_500_5_8_6.txt
-B
-instance_100_500_5_8_7.txt
-A
-instance_100_500_5_8_8.txt
-A
-instance_100_500_5_8_9.txt
-A
-instance_100_500_6_0_1.txt
-A
-instance_100_500_6_0_10.txt
-A
-instance_100_500_6_0_2.txt
-A
-instance_100_500_6_0_3.txt
-A
-instance_100_500_6_0_4.txt
-A
-instance_100_500_6_0_5.txt
-A
-instance_100_500_6_0_6.txt
-A
-instance_100_500_6_0_7.txt
-A
-instance_100_500_6_0_8.txt
-A
-instance_100_500_6_0_9.txt
-A
-instance_100_500_6_1_1.txt
-A
-instance_100_500_6_1_10.txt
-A
-instance_100_500_6_1_2.txt
-A
-instance_100_500_6_1_3.txt
-A
-instance_100_500_6_1_4.txt
-A
-instance_100_500_6_1_5.txt
-B
-instance_100_500_6_1_6.txt
-A
-instance_100_500_6_1_7.txt
-A
-instance_100_500_6_1_8.txt
-A
-instance_100_500_6_1_9.txt
-A
-instance_100_500_6_2_1.txt
-A
-instance_100_500_6_2_10.txt
-A
-instance_100_500_6_2_2.txt
-A
-instance_100_500_6_2_3.txt
-A
-instance_100_500_6_2_4.txt
-A
-instance_100_500_6_2_5.txt
-A
-instance_100_500_6_2_6.txt
-A
-instance_100_500_6_2_7.txt
-A
-instance_100_500_6_2_8.txt
-A
-instance_100_500_6_2_9.txt
-A
-instance_100_500_6_3_1.txt
-A
-instance_100_500_6_3_10.txt
-A
-instance_100_500_6_3_2.txt
-A
-instance_100_500_6_3_3.txt
-A
-instance_100_500_6_3_4.txt
-A
-instance_100_500_6_3_5.txt
-A
-instance_100_500_6_3_6.txt
-A
-instance_100_500_6_3_7.txt
-A
-instance_100_500_6_3_8.txt
-A
-instance_100_500_6_3_9.txt
-A
-instance_100_500_6_4_1.txt
-A
-instance_100_500_6_4_10.txt
-A
-instance_100_500_6_4_2.txt
-A
-instance_100_500_6_4_3.txt
-A
-instance_100_500_6_4_4.txt
-A
-instance_100_500_6_4_5.txt
-B
-instance_100_500_6_4_6.txt
-A
-instance_100_500_6_4_7.txt
-A
-instance_100_500_6_4_8.txt
-A
-instance_100_500_6_4_9.txt
-A
-instance_100_500_6_5_1.txt
-A
-instance_100_500_6_5_10.txt
-A
-instance_100_500_6_5_2.txt
-A
-instance_100_500_6_5_3.txt
-A
-instance_100_500_6_5_4.txt
-A
-instance_100_500_6_5_5.txt
-A
-instance_100_500_6_5_6.txt
-A
-instance_100_500_6_5_7.txt
-A
-instance_100_500_6_5_8.txt
-A
-instance_100_500_6_5_9.txt
-A
-instance_100_500_6_6_1.txt
-A
-instance_100_500_6_6_10.txt
-B
-instance_100_500_6_6_2.txt
-A
-instance_100_500_6_6_3.txt
-B
-instance_100_500_6_6_4.txt
-A
-instance_100_500_6_6_5.txt
-A
-instance_100_500_6_6_6.txt
-A
-instance_100_500_6_6_7.txt
-A
-instance_100_500_6_6_8.txt
-A
-instance_100_500_6_6_9.txt
-A
-instance_100_500_6_7_1.txt
-B
-instance_100_500_6_7_10.txt
-B
-instance_100_500_6_7_2.txt
-A
-instance_100_500_6_7_3.txt
-B
-instance_100_500_6_7_4.txt
-A
-instance_100_500_6_7_5.txt
-A
-instance_100_500_6_7_6.txt
-A
-instance_100_500_6_7_7.txt
-A
-instance_100_500_6_7_8.txt
-B
-instance_100_500_6_7_9.txt
-A
-instance_100_500_6_8_1.txt
-B
-instance_100_500_6_8_10.txt
-A
-instance_100_500_6_8_2.txt
-A
-instance_100_500_6_8_3.txt
-B
-instance_100_500_6_8_4.txt
-B
-instance_100_500_6_8_5.txt
-A
-instance_100_500_6_8_6.txt
-B
-instance_100_500_6_8_7.txt
-B
-instance_100_500_6_8_8.txt
-B
-instance_100_500_6_8_9.txt
-A
-instance_100_500_7_0_1.txt
-A
-instance_100_500_7_0_10.txt
-A
-instance_100_500_7_0_2.txt
-A
-instance_100_500_7_0_3.txt
-A
-instance_100_500_7_0_4.txt
-A
-instance_100_500_7_0_5.txt
-A
-instance_100_500_7_0_6.txt
-A
-instance_100_500_7_0_7.txt
-A
-instance_100_500_7_0_8.txt
-A
-instance_100_500_7_0_9.txt
-A
-instance_100_500_7_1_1.txt
-A
-instance_100_500_7_1_10.txt
-A
-instance_100_500_7_1_2.txt
-A
-instance_100_500_7_1_3.txt
-A
-instance_100_500_7_1_4.txt
-A
-instance_100_500_7_1_5.txt
-A
-instance_100_500_7_1_6.txt
-A
-instance_100_500_7_1_7.txt
-A
-instance_100_500_7_1_8.txt
-A
-instance_100_500_7_1_9.txt
-A
-instance_100_500_7_2_1.txt
-A
-instance_100_500_7_2_10.txt
-A
-instance_100_500_7_2_2.txt
-A
-instance_100_500_7_2_3.txt
-A
-instance_100_500_7_2_4.txt
-A
-instance_100_500_7_2_5.txt
-A
-instance_100_500_7_2_6.txt
-A
-instance_100_500_7_2_7.txt
-A
-instance_100_500_7_2_8.txt
-A
-instance_100_500_7_2_9.txt
-A
-instance_100_500_7_3_1.txt
-A
-instance_100_500_7_3_10.txt
-A
-instance_100_500_7_3_2.txt
-A
-instance_100_500_7_3_3.txt
-A
-instance_100_500_7_3_4.txt
-A
-instance_100_500_7_3_5.txt
-A
-instance_100_500_7_3_6.txt
-A
-instance_100_500_7_3_7.txt
-A
-instance_100_500_7_3_8.txt
-A
-instance_100_500_7_3_9.txt
-A
-instance_100_500_7_4_1.txt
-A
-instance_100_500_7_4_10.txt
-B
-instance_100_500_7_4_2.txt
-A
-instance_100_500_7_4_3.txt
-A
-instance_100_500_7_4_4.txt
-A
-instance_100_500_7_4_5.txt
-A
-instance_100_500_7_4_6.txt
-A
-instance_100_500_7_4_7.txt
-B
-instance_100_500_7_4_8.txt
-A
-instance_100_500_7_4_9.txt
-A
-instance_100_500_7_5_1.txt
-A
-instance_100_500_7_5_10.txt
-A
-instance_100_500_7_5_2.txt
-A
-instance_100_500_7_5_3.txt
-A
-instance_100_500_7_5_4.txt
-A
-instance_100_500_7_5_5.txt
-A
-instance_100_500_7_5_6.txt
-B
-instance_100_500_7_5_7.txt
-A
-instance_100_500_7_5_8.txt
-A
-instance_100_500_7_5_9.txt
-A
-instance_100_500_7_6_1.txt
-B
-instance_100_500_7_6_10.txt
-A
-instance_100_500_7_6_2.txt
-A
-instance_100_500_7_6_3.txt
-B
-instance_100_500_7_6_4.txt
-B
-instance_100_500_7_6_5.txt
-A
-instance_100_500_7_6_6.txt
-B
-instance_100_500_7_6_7.txt
-A
-instance_100_500_7_6_8.txt
-B
-instance_100_500_7_6_9.txt
-A
-instance_100_500_7_7_1.txt
-B
-instance_100_500_7_7_10.txt
-A
-instance_100_500_7_7_2.txt
-A
-instance_100_500_7_7_3.txt
-B
-instance_100_500_7_7_4.txt
-B
-instance_100_500_7_7_5.txt
-B
-instance_100_500_7_7_6.txt
-B
-instance_100_500_7_7_7.txt
-A
-instance_100_500_7_7_8.txt
-A
-instance_100_500_7_7_9.txt
-A
-instance_100_500_7_8_1.txt
-B
-instance_100_500_7_8_10.txt
-A
-instance_100_500_7_8_2.txt
-B
-instance_100_500_7_8_3.txt
-B
-instance_100_500_7_8_4.txt
-B
-instance_100_500_7_8_5.txt
-B
-instance_100_500_7_8_6.txt
-A
-instance_100_500_7_8_7.txt
-B
-instance_100_500_7_8_8.txt
-A
-instance_100_500_7_8_9.txt
-B
-instance_100_500_8_0_1.txt
-A
-instance_100_500_8_0_10.txt
-A
-instance_100_500_8_0_2.txt
-A
-instance_100_500_8_0_3.txt
-A
-instance_100_500_8_0_4.txt
-A
-instance_100_500_8_0_5.txt
-A
-instance_100_500_8_0_6.txt
-A
-instance_100_500_8_0_7.txt
-A
-instance_100_500_8_0_8.txt
-A
-instance_100_500_8_0_9.txt
-A
-instance_100_500_8_1_1.txt
-A
-instance_100_500_8_1_10.txt
-A
-instance_100_500_8_1_2.txt
-A
-instance_100_500_8_1_3.txt
-A
-instance_100_500_8_1_4.txt
-A
-instance_100_500_8_1_5.txt
-A
-instance_100_500_8_1_6.txt
-A
-instance_100_500_8_1_7.txt
-A
-instance_100_500_8_1_8.txt
-A
-instance_100_500_8_1_9.txt
-A
-instance_100_500_8_2_1.txt
-A
-instance_100_500_8_2_10.txt
-A
-instance_100_500_8_2_2.txt
-A
-instance_100_500_8_2_3.txt
-A
-instance_100_500_8_2_4.txt
-A
-instance_100_500_8_2_5.txt
-A
-instance_100_500_8_2_6.txt
-A
-instance_100_500_8_2_7.txt
-A
-instance_100_500_8_2_8.txt
-A
-instance_100_500_8_2_9.txt
-A
-instance_100_500_8_3_1.txt
-A
-instance_100_500_8_3_10.txt
-A
-instance_100_500_8_3_2.txt
-B
-instance_100_500_8_3_3.txt
-A
-instance_100_500_8_3_4.txt
-A
-instance_100_500_8_3_5.txt
-A
-instance_100_500_8_3_6.txt
-B
-instance_100_500_8_3_7.txt
-A
-instance_100_500_8_3_8.txt
-A
-instance_100_500_8_3_9.txt
-A
-instance_100_500_8_4_1.txt
-A
-instance_100_500_8_4_10.txt
-A
-instance_100_500_8_4_2.txt
-A
-instance_100_500_8_4_3.txt
-A
-instance_100_500_8_4_4.txt
-A
-instance_100_500_8_4_5.txt
-A
-instance_100_500_8_4_6.txt
-A
-instance_100_500_8_4_7.txt
-A
-instance_100_500_8_4_8.txt
-A
-instance_100_500_8_4_9.txt
-A
-instance_100_500_8_5_1.txt
-A
-instance_100_500_8_5_10.txt
-A
-instance_100_500_8_5_2.txt
-A
-instance_100_500_8_5_3.txt
-A
-instance_100_500_8_5_4.txt
-A
-instance_100_500_8_5_5.txt
-A
-instance_100_500_8_5_6.txt
-A
-instance_100_500_8_5_7.txt
-B
-instance_100_500_8_5_8.txt
-A
-instance_100_500_8_5_9.txt
-B
-instance_100_500_8_6_1.txt
-B
-instance_100_500_8_6_10.txt
-A
-instance_100_500_8_6_2.txt
-B
-instance_100_500_8_6_3.txt
-A
-instance_100_500_8_6_4.txt
-B
-instance_100_500_8_6_5.txt
-B
-instance_100_500_8_6_6.txt
-A
-instance_100_500_8_6_7.txt
-B
-instance_100_500_8_6_8.txt
-A
-instance_100_500_8_6_9.txt
-B
-instance_100_500_8_7_1.txt
-A
-instance_100_500_8_7_10.txt
-B
-instance_100_500_8_7_2.txt
-A
-instance_100_500_8_7_3.txt
-B
-instance_100_500_8_7_4.txt
-A
-instance_100_500_8_7_5.txt
-A
-instance_100_500_8_7_6.txt
-A
-instance_100_500_8_7_7.txt
-B
-instance_100_500_8_7_8.txt
-B
-instance_100_500_8_7_9.txt
-B
-instance_100_500_8_8_1.txt
-A
-instance_100_500_8_8_10.txt
-A
-instance_100_500_8_8_2.txt
-A
-instance_100_500_8_8_3.txt
-B
-instance_100_500_8_8_4.txt
-B
-instance_100_500_8_8_5.txt
-B
-instance_100_500_8_8_6.txt
-B
-instance_100_500_8_8_7.txt
-A
-instance_100_500_8_8_8.txt
-A
-instance_100_500_8_8_9.txt
-A
-instance_100_500_9_0_1.txt
-A
-instance_100_500_9_0_10.txt
-A
-instance_100_500_9_0_2.txt
-A
-instance_100_500_9_0_3.txt
-A
-instance_100_500_9_0_4.txt
-A
-instance_100_500_9_0_5.txt
-A
-instance_100_500_9_0_6.txt
-A
-instance_100_500_9_0_7.txt
-A
-instance_100_500_9_0_8.txt
-A
-instance_100_500_9_0_9.txt
-A
-instance_100_500_9_1_1.txt
-A
-instance_100_500_9_1_10.txt
-A
-instance_100_500_9_1_2.txt
-A
-instance_100_500_9_1_3.txt
-A
-instance_100_500_9_1_4.txt
-A
-instance_100_500_9_1_5.txt
-A
-instance_100_500_9_1_6.txt
-A
-instance_100_500_9_1_7.txt
-A
-instance_100_500_9_1_8.txt
-A
-instance_100_500_9_1_9.txt
-A
-instance_100_500_9_2_1.txt
-A
-instance_100_500_9_2_10.txt
-A
-instance_100_500_9_2_2.txt
-A
-instance_100_500_9_2_3.txt
-A
-instance_100_500_9_2_4.txt
-A
-instance_100_500_9_2_5.txt
-A
-instance_100_500_9_2_6.txt
-A
-instance_100_500_9_2_7.txt
-A
-instance_100_500_9_2_8.txt
-A
-instance_100_500_9_2_9.txt
-A
-instance_100_500_9_3_1.txt
-A
-instance_100_500_9_3_10.txt
-A
-instance_100_500_9_3_2.txt
-A
-instance_100_500_9_3_3.txt
-A
-instance_100_500_9_3_4.txt
-A
-instance_100_500_9_3_5.txt
-B
-instance_100_500_9_3_6.txt
-A
-instance_100_500_9_3_7.txt
-A
-instance_100_500_9_3_8.txt
-A
-instance_100_500_9_3_9.txt
-A
-instance_100_500_9_4_1.txt
-A
-instance_100_500_9_4_10.txt
-A
-instance_100_500_9_4_2.txt
-A
-instance_100_500_9_4_3.txt
-A
-instance_100_500_9_4_4.txt
-B
-instance_100_500_9_4_5.txt
-A
-instance_100_500_9_4_6.txt
-A
-instance_100_500_9_4_7.txt
-A
-instance_100_500_9_4_8.txt
-A
-instance_100_500_9_4_9.txt
-A
-instance_100_500_9_5_1.txt
-B
-instance_100_500_9_5_10.txt
-A
-instance_100_500_9_5_2.txt
-A
-instance_100_500_9_5_3.txt
-A
-instance_100_500_9_5_4.txt
-A
-instance_100_500_9_5_5.txt
-A
-instance_100_500_9_5_6.txt
-A
-instance_100_500_9_5_7.txt
-A
-instance_100_500_9_5_8.txt
-B
-instance_100_500_9_5_9.txt
-A
-instance_100_500_9_6_1.txt
-A
-instance_100_500_9_6_10.txt
-A
-instance_100_500_9_6_2.txt
-A
-instance_100_500_9_6_3.txt
-A
-instance_100_500_9_6_4.txt
-B
-instance_100_500_9_6_5.txt
-B
-instance_100_500_9_6_6.txt
-B
-instance_100_500_9_6_7.txt
-A
-instance_100_500_9_6_8.txt
-B
-instance_100_500_9_6_9.txt
-B
-instance_100_500_9_7_1.txt
-B
-instance_100_500_9_7_10.txt
-B
-instance_100_500_9_7_2.txt
-B
-instance_100_500_9_7_3.txt
-B
-instance_100_500_9_7_4.txt
-B
-instance_100_500_9_7_5.txt
-A
-instance_100_500_9_7_6.txt
-B
-instance_100_500_9_7_7.txt
-A
-instance_100_500_9_7_8.txt
-B
-instance_100_500_9_7_9.txt
-B
-instance_100_500_9_8_1.txt
-B
-instance_100_500_9_8_10.txt
-B
-instance_100_500_9_8_2.txt
-B
-instance_100_500_9_8_3.txt
-A
-instance_100_500_9_8_4.txt
-A
-instance_100_500_9_8_5.txt
-B
-instance_100_500_9_8_6.txt
-A
-instance_100_500_9_8_7.txt
-B
-instance_100_500_9_8_8.txt
-A
-instance_100_500_9_8_9.txt
-B
+./main.exe -sap -benchmark < files.in
+instance_100_500_2_0_10.txt A
+instance_100_500_2_0_1.txt A
+instance_100_500_2_0_2.txt A
+instance_100_500_2_0_3.txt A
+instance_100_500_2_0_4.txt A
+instance_100_500_2_0_5.txt A
+instance_100_500_2_0_6.txt A
+instance_100_500_2_0_7.txt A
+instance_100_500_2_0_8.txt A
+instance_100_500_2_0_9.txt A
+testType:2 - 0 used 753.794 ms
+instance_100_500_2_1_10.txt A
+instance_100_500_2_1_1.txt A
+instance_100_500_2_1_2.txt A
+instance_100_500_2_1_3.txt A
+instance_100_500_2_1_4.txt A
+instance_100_500_2_1_5.txt A
+instance_100_500_2_1_6.txt A
+instance_100_500_2_1_7.txt A
+instance_100_500_2_1_8.txt A
+instance_100_500_2_1_9.txt A
+testType:2 - 1 used 617.088 ms
+instance_100_500_2_2_10.txt A
+instance_100_500_2_2_1.txt A
+instance_100_500_2_2_2.txt A
+instance_100_500_2_2_3.txt A
+instance_100_500_2_2_4.txt A
+instance_100_500_2_2_5.txt A
+instance_100_500_2_2_6.txt A
+instance_100_500_2_2_7.txt A
+instance_100_500_2_2_8.txt A
+instance_100_500_2_2_9.txt A
+testType:2 - 2 used 567.513 ms
+instance_100_500_2_3_10.txt A
+instance_100_500_2_3_1.txt A
+instance_100_500_2_3_2.txt A
+instance_100_500_2_3_3.txt A
+instance_100_500_2_3_4.txt A
+instance_100_500_2_3_5.txt A
+instance_100_500_2_3_6.txt A
+instance_100_500_2_3_7.txt A
+instance_100_500_2_3_8.txt A
+instance_100_500_2_3_9.txt A
+testType:2 - 3 used 508.782 ms
+instance_100_500_2_4_10.txt A
+instance_100_500_2_4_1.txt A
+instance_100_500_2_4_2.txt A
+instance_100_500_2_4_3.txt A
+instance_100_500_2_4_4.txt A
+instance_100_500_2_4_5.txt A
+instance_100_500_2_4_6.txt A
+instance_100_500_2_4_7.txt A
+instance_100_500_2_4_8.txt A
+instance_100_500_2_4_9.txt A
+testType:2 - 4 used 457.462 ms
+instance_100_500_2_5_10.txt A
+instance_100_500_2_5_1.txt A
+instance_100_500_2_5_2.txt A
+instance_100_500_2_5_3.txt A
+instance_100_500_2_5_4.txt A
+instance_100_500_2_5_5.txt A
+instance_100_500_2_5_6.txt A
+instance_100_500_2_5_7.txt A
+instance_100_500_2_5_8.txt A
+instance_100_500_2_5_9.txt A
+testType:2 - 5 used 405.656 ms
+instance_100_500_2_6_10.txt A
+instance_100_500_2_6_1.txt A
+instance_100_500_2_6_2.txt A
+instance_100_500_2_6_3.txt C
+instance_100_500_2_6_4.txt A
+instance_100_500_2_6_5.txt A
+instance_100_500_2_6_6.txt A
+instance_100_500_2_6_7.txt A
+instance_100_500_2_6_8.txt A
+instance_100_500_2_6_9.txt A
+testType:2 - 6 used 386.53 ms
+instance_100_500_2_7_10.txt C
+instance_100_500_2_7_1.txt C
+instance_100_500_2_7_2.txt A
+instance_100_500_2_7_3.txt A
+instance_100_500_2_7_4.txt A
+instance_100_500_2_7_5.txt C
+instance_100_500_2_7_6.txt C
+instance_100_500_2_7_7.txt C
+instance_100_500_2_7_8.txt C
+instance_100_500_2_7_9.txt C
+testType:3 - 7 used 563.621 ms
+instance_100_500_2_8_10.txt C
+instance_100_500_2_8_1.txt C
+instance_100_500_2_8_2.txt C
+instance_100_500_2_8_3.txt C
+instance_100_500_2_8_4.txt C
+instance_100_500_2_8_5.txt C
+instance_100_500_2_8_6.txt C
+instance_100_500_2_8_7.txt C
+instance_100_500_2_8_8.txt C
+instance_100_500_2_8_9.txt C
+testType:3 - 8 used 677.809 ms
+instance_100_500_3_0_10.txt A
+instance_100_500_3_0_1.txt A
+instance_100_500_3_0_2.txt A
+instance_100_500_3_0_3.txt A
+instance_100_500_3_0_4.txt A
+instance_100_500_3_0_5.txt A
+instance_100_500_3_0_6.txt A
+instance_100_500_3_0_7.txt A
+instance_100_500_3_0_8.txt A
+instance_100_500_3_0_9.txt A
+testType:3 - 0 used 970.342 ms
+instance_100_500_3_1_10.txt A
+instance_100_500_3_1_1.txt A
+instance_100_500_3_1_2.txt A
+instance_100_500_3_1_3.txt A
+instance_100_500_3_1_4.txt A
+instance_100_500_3_1_5.txt A
+instance_100_500_3_1_6.txt A
+instance_100_500_3_1_7.txt A
+instance_100_500_3_1_8.txt A
+instance_100_500_3_1_9.txt A
+testType:3 - 1 used 876.773 ms
+instance_100_500_3_2_10.txt A
+instance_100_500_3_2_1.txt A
+instance_100_500_3_2_2.txt A
+instance_100_500_3_2_3.txt A
+instance_100_500_3_2_4.txt A
+instance_100_500_3_2_5.txt A
+instance_100_500_3_2_6.txt A
+instance_100_500_3_2_7.txt A
+instance_100_500_3_2_8.txt B
+instance_100_500_3_2_9.txt A
+testType:3 - 2 used 787.31 ms
+instance_100_500_3_3_10.txt A
+instance_100_500_3_3_1.txt A
+instance_100_500_3_3_2.txt A
+instance_100_500_3_3_3.txt A
+instance_100_500_3_3_4.txt A
+instance_100_500_3_3_5.txt A
+instance_100_500_3_3_6.txt A
+instance_100_500_3_3_7.txt A
+instance_100_500_3_3_8.txt A
+instance_100_500_3_3_9.txt A
+testType:3 - 3 used 693.101 ms
+instance_100_500_3_4_10.txt A
+instance_100_500_3_4_1.txt A
+instance_100_500_3_4_2.txt A
+instance_100_500_3_4_3.txt A
+instance_100_500_3_4_4.txt A
+instance_100_500_3_4_5.txt A
+instance_100_500_3_4_6.txt A
+instance_100_500_3_4_7.txt A
+instance_100_500_3_4_8.txt A
+instance_100_500_3_4_9.txt A
+testType:3 - 4 used 609.118 ms
+instance_100_500_3_5_10.txt A
+instance_100_500_3_5_1.txt A
+instance_100_500_3_5_2.txt A
+instance_100_500_3_5_3.txt A
+instance_100_500_3_5_4.txt A
+instance_100_500_3_5_5.txt B
+instance_100_500_3_5_6.txt A
+instance_100_500_3_5_7.txt A
+instance_100_500_3_5_8.txt B
+instance_100_500_3_5_9.txt A
+testType:3 - 5 used 530.141 ms
+instance_100_500_3_6_10.txt A
+instance_100_500_3_6_1.txt A
+instance_100_500_3_6_2.txt A
+instance_100_500_3_6_3.txt A
+instance_100_500_3_6_4.txt A
+instance_100_500_3_6_5.txt A
+instance_100_500_3_6_6.txt A
+instance_100_500_3_6_7.txt A
+instance_100_500_3_6_8.txt A
+instance_100_500_3_6_9.txt A
+testType:4 - 6 used 450.661 ms
+instance_100_500_3_7_10.txt A
+instance_100_500_3_7_1.txt A
+instance_100_500_3_7_2.txt A
+instance_100_500_3_7_3.txt A
+instance_100_500_3_7_4.txt A
+instance_100_500_3_7_5.txt A
+instance_100_500_3_7_6.txt A
+instance_100_500_3_7_7.txt A
+instance_100_500_3_7_8.txt A
+instance_100_500_3_7_9.txt A
+testType:4 - 7 used 372.148 ms
+instance_100_500_3_8_10.txt A
+instance_100_500_3_8_1.txt C
+instance_100_500_3_8_2.txt C
+instance_100_500_3_8_3.txt A
+instance_100_500_3_8_4.txt A
+instance_100_500_3_8_5.txt C
+instance_100_500_3_8_6.txt A
+instance_100_500_3_8_7.txt C
+instance_100_500_3_8_8.txt C
+instance_100_500_3_8_9.txt C
+testType:4 - 8 used 703.026 ms
+instance_100_500_4_0_10.txt A
+instance_100_500_4_0_1.txt A
+instance_100_500_4_0_2.txt A
+instance_100_500_4_0_3.txt A
+instance_100_500_4_0_4.txt A
+instance_100_500_4_0_5.txt A
+instance_100_500_4_0_6.txt A
+instance_100_500_4_0_7.txt A
+instance_100_500_4_0_8.txt A
+instance_100_500_4_0_9.txt A
+testType:4 - 0 used 1305.23 ms
+instance_100_500_4_1_10.txt A
+instance_100_500_4_1_1.txt A
+instance_100_500_4_1_2.txt A
+instance_100_500_4_1_3.txt A
+instance_100_500_4_1_4.txt A
+instance_100_500_4_1_5.txt A
+instance_100_500_4_1_6.txt A
+instance_100_500_4_1_7.txt A
+instance_100_500_4_1_8.txt A
+instance_100_500_4_1_9.txt A
+testType:4 - 1 used 1161 ms
+instance_100_500_4_2_10.txt A
+instance_100_500_4_2_1.txt A
+instance_100_500_4_2_2.txt A
+instance_100_500_4_2_3.txt A
+instance_100_500_4_2_4.txt A
+instance_100_500_4_2_5.txt A
+instance_100_500_4_2_6.txt A
+instance_100_500_4_2_7.txt A
+instance_100_500_4_2_8.txt A
+instance_100_500_4_2_9.txt A
+testType:4 - 2 used 1043.88 ms
+instance_100_500_4_3_10.txt A
+instance_100_500_4_3_1.txt A
+instance_100_500_4_3_2.txt A
+instance_100_500_4_3_3.txt A
+instance_100_500_4_3_4.txt A
+instance_100_500_4_3_5.txt A
+instance_100_500_4_3_6.txt A
+instance_100_500_4_3_7.txt A
+instance_100_500_4_3_8.txt A
+instance_100_500_4_3_9.txt A
+testType:4 - 3 used 900.147 ms
+instance_100_500_4_4_10.txt A
+instance_100_500_4_4_1.txt A
+instance_100_500_4_4_2.txt A
+instance_100_500_4_4_3.txt A
+instance_100_500_4_4_4.txt A
+instance_100_500_4_4_5.txt B
+instance_100_500_4_4_6.txt A
+instance_100_500_4_4_7.txt A
+instance_100_500_4_4_8.txt A
+instance_100_500_4_4_9.txt A
+testType:4 - 4 used 793.964 ms
+instance_100_500_4_5_10.txt A
+instance_100_500_4_5_1.txt B
+instance_100_500_4_5_2.txt A
+instance_100_500_4_5_3.txt A
+instance_100_500_4_5_4.txt A
+instance_100_500_4_5_5.txt A
+instance_100_500_4_5_6.txt A
+instance_100_500_4_5_7.txt A
+instance_100_500_4_5_8.txt A
+instance_100_500_4_5_9.txt A
+testType:5 - 5 used 663.754 ms
+instance_100_500_4_6_10.txt A
+instance_100_500_4_6_1.txt B
+instance_100_500_4_6_2.txt B
+instance_100_500_4_6_3.txt A
+instance_100_500_4_6_4.txt A
+instance_100_500_4_6_5.txt B
+instance_100_500_4_6_6.txt A
+instance_100_500_4_6_7.txt A
+instance_100_500_4_6_8.txt A
+instance_100_500_4_6_9.txt A
+testType:5 - 6 used 556.996 ms
+instance_100_500_4_7_10.txt A
+instance_100_500_4_7_1.txt B
+instance_100_500_4_7_2.txt A
+instance_100_500_4_7_3.txt A
+instance_100_500_4_7_4.txt A
+instance_100_500_4_7_5.txt B
+instance_100_500_4_7_6.txt A
+instance_100_500_4_7_7.txt A
+instance_100_500_4_7_8.txt A
+instance_100_500_4_7_9.txt A
+testType:5 - 7 used 447.564 ms
+instance_100_500_4_8_10.txt A
+instance_100_500_4_8_1.txt A
+instance_100_500_4_8_2.txt C
+instance_100_500_4_8_3.txt A
+instance_100_500_4_8_4.txt A
+instance_100_500_4_8_5.txt C
+instance_100_500_4_8_6.txt A
+instance_100_500_4_8_7.txt A
+instance_100_500_4_8_8.txt A
+instance_100_500_4_8_9.txt A
+testType:5 - 8 used 538.318 ms
+instance_100_500_5_0_10.txt A
+instance_100_500_5_0_1.txt A
+instance_100_500_5_0_2.txt A
+instance_100_500_5_0_3.txt A
+instance_100_500_5_0_4.txt A
+instance_100_500_5_0_5.txt A
+instance_100_500_5_0_6.txt A
+instance_100_500_5_0_7.txt A
+instance_100_500_5_0_8.txt A
+instance_100_500_5_0_9.txt A
+testType:5 - 0 used 1673.04 ms
+instance_100_500_5_1_10.txt A
+instance_100_500_5_1_1.txt A
+instance_100_500_5_1_2.txt A
+instance_100_500_5_1_3.txt A
+instance_100_500_5_1_4.txt A
+instance_100_500_5_1_5.txt A
+instance_100_500_5_1_6.txt A
+instance_100_500_5_1_7.txt A
+instance_100_500_5_1_8.txt A
+instance_100_500_5_1_9.txt A
+testType:5 - 1 used 1473.33 ms
+instance_100_500_5_2_10.txt A
+instance_100_500_5_2_1.txt A
+instance_100_500_5_2_2.txt A
+instance_100_500_5_2_3.txt A
+instance_100_500_5_2_4.txt A
+instance_100_500_5_2_5.txt A
+instance_100_500_5_2_6.txt A
+instance_100_500_5_2_7.txt A
+instance_100_500_5_2_8.txt A
+instance_100_500_5_2_9.txt A
+testType:5 - 2 used 1301.15 ms
+instance_100_500_5_3_10.txt A
+instance_100_500_5_3_1.txt A
+instance_100_500_5_3_2.txt A
+instance_100_500_5_3_3.txt B
+instance_100_500_5_3_4.txt A
+instance_100_500_5_3_5.txt A
+instance_100_500_5_3_6.txt A
+instance_100_500_5_3_7.txt A
+instance_100_500_5_3_8.txt A
+instance_100_500_5_3_9.txt A
+testType:5 - 3 used 1124.3 ms
+instance_100_500_5_4_10.txt A
+instance_100_500_5_4_1.txt A
+instance_100_500_5_4_2.txt A
+instance_100_500_5_4_3.txt A
+instance_100_500_5_4_4.txt A
+instance_100_500_5_4_5.txt A
+instance_100_500_5_4_6.txt A
+instance_100_500_5_4_7.txt A
+instance_100_500_5_4_8.txt A
+instance_100_500_5_4_9.txt A
+testType:6 - 4 used 959.574 ms
+instance_100_500_5_5_10.txt B
+instance_100_500_5_5_1.txt A
+instance_100_500_5_5_2.txt A
+instance_100_500_5_5_3.txt A
+instance_100_500_5_5_4.txt A
+instance_100_500_5_5_5.txt A
+instance_100_500_5_5_6.txt B
+instance_100_500_5_5_7.txt A
+instance_100_500_5_5_8.txt A
+instance_100_500_5_5_9.txt A
+testType:6 - 5 used 805.128 ms
+instance_100_500_5_6_10.txt B
+instance_100_500_5_6_1.txt A
+instance_100_500_5_6_2.txt A
+instance_100_500_5_6_3.txt A
+instance_100_500_5_6_4.txt A
+instance_100_500_5_6_5.txt A
+instance_100_500_5_6_6.txt A
+instance_100_500_5_6_7.txt A
+instance_100_500_5_6_8.txt B
+instance_100_500_5_6_9.txt A
+testType:6 - 6 used 659.582 ms
+instance_100_500_5_7_10.txt A
+instance_100_500_5_7_1.txt A
+instance_100_500_5_7_2.txt B
+instance_100_500_5_7_3.txt B
+instance_100_500_5_7_4.txt A
+instance_100_500_5_7_5.txt A
+instance_100_500_5_7_6.txt A
+instance_100_500_5_7_7.txt B
+instance_100_500_5_7_8.txt A
+instance_100_500_5_7_9.txt B
+testType:6 - 7 used 526.201 ms
+instance_100_500_5_8_10.txt B
+instance_100_500_5_8_1.txt A
+instance_100_500_5_8_2.txt A
+instance_100_500_5_8_3.txt A
+instance_100_500_5_8_4.txt A
+instance_100_500_5_8_5.txt A
+instance_100_500_5_8_6.txt B
+instance_100_500_5_8_7.txt A
+instance_100_500_5_8_8.txt A
+instance_100_500_5_8_9.txt A
+testType:6 - 8 used 393.464 ms
+instance_100_500_6_0_10.txt A
+instance_100_500_6_0_1.txt A
+instance_100_500_6_0_2.txt A
+instance_100_500_6_0_3.txt A
+instance_100_500_6_0_4.txt A
+instance_100_500_6_0_5.txt A
+instance_100_500_6_0_6.txt A
+instance_100_500_6_0_7.txt A
+instance_100_500_6_0_8.txt A
+instance_100_500_6_0_9.txt A
+testType:6 - 0 used 2077.32 ms
+instance_100_500_6_1_10.txt A
+instance_100_500_6_1_1.txt A
+instance_100_500_6_1_2.txt A
+instance_100_500_6_1_3.txt A
+instance_100_500_6_1_4.txt A
+instance_100_500_6_1_5.txt B
+instance_100_500_6_1_6.txt A
+instance_100_500_6_1_7.txt A
+instance_100_500_6_1_8.txt A
+instance_100_500_6_1_9.txt A
+testType:6 - 1 used 1820.77 ms
+instance_100_500_6_2_10.txt A
+instance_100_500_6_2_1.txt A
+instance_100_500_6_2_2.txt A
+instance_100_500_6_2_3.txt A
+instance_100_500_6_2_4.txt A
+instance_100_500_6_2_5.txt A
+instance_100_500_6_2_6.txt A
+instance_100_500_6_2_7.txt A
+instance_100_500_6_2_8.txt A
+instance_100_500_6_2_9.txt A
+testType:6 - 2 used 1582.94 ms
+instance_100_500_6_3_10.txt A
+instance_100_500_6_3_1.txt A
+instance_100_500_6_3_2.txt A
+instance_100_500_6_3_3.txt A
+instance_100_500_6_3_4.txt A
+instance_100_500_6_3_5.txt A
+instance_100_500_6_3_6.txt A
+instance_100_500_6_3_7.txt A
+instance_100_500_6_3_8.txt A
+instance_100_500_6_3_9.txt A
+testType:7 - 3 used 1355.37 ms
+instance_100_500_6_4_10.txt A
+instance_100_500_6_4_1.txt A
+instance_100_500_6_4_2.txt A
+instance_100_500_6_4_3.txt A
+instance_100_500_6_4_4.txt A
+instance_100_500_6_4_5.txt B
+instance_100_500_6_4_6.txt A
+instance_100_500_6_4_7.txt A
+instance_100_500_6_4_8.txt A
+instance_100_500_6_4_9.txt A
+testType:7 - 4 used 1143.79 ms
+instance_100_500_6_5_10.txt A
+instance_100_500_6_5_1.txt A
+instance_100_500_6_5_2.txt A
+instance_100_500_6_5_3.txt A
+instance_100_500_6_5_4.txt A
+instance_100_500_6_5_5.txt A
+instance_100_500_6_5_6.txt A
+instance_100_500_6_5_7.txt A
+instance_100_500_6_5_8.txt A
+instance_100_500_6_5_9.txt A
+testType:7 - 5 used 944.382 ms
+instance_100_500_6_6_10.txt B
+instance_100_500_6_6_1.txt A
+instance_100_500_6_6_2.txt A
+instance_100_500_6_6_3.txt B
+instance_100_500_6_6_4.txt A
+instance_100_500_6_6_5.txt A
+instance_100_500_6_6_6.txt A
+instance_100_500_6_6_7.txt A
+instance_100_500_6_6_8.txt A
+instance_100_500_6_6_9.txt A
+testType:7 - 6 used 773.125 ms
+instance_100_500_6_7_10.txt B
+instance_100_500_6_7_1.txt B
+instance_100_500_6_7_2.txt A
+instance_100_500_6_7_3.txt B
+instance_100_500_6_7_4.txt A
+instance_100_500_6_7_5.txt A
+instance_100_500_6_7_6.txt A
+instance_100_500_6_7_7.txt A
+instance_100_500_6_7_8.txt B
+instance_100_500_6_7_9.txt A
+testType:7 - 7 used 609.14 ms
+instance_100_500_6_8_10.txt A
+instance_100_500_6_8_1.txt B
+instance_100_500_6_8_2.txt A
+instance_100_500_6_8_3.txt B
+instance_100_500_6_8_4.txt B
+instance_100_500_6_8_5.txt A
+instance_100_500_6_8_6.txt B
+instance_100_500_6_8_7.txt B
+instance_100_500_6_8_8.txt B
+instance_100_500_6_8_9.txt A
+testType:7 - 8 used 457.446 ms
+instance_100_500_7_0_10.txt A
+instance_100_500_7_0_1.txt A
+instance_100_500_7_0_2.txt A
+instance_100_500_7_0_3.txt A
+instance_100_500_7_0_4.txt A
+instance_100_500_7_0_5.txt A
+instance_100_500_7_0_6.txt A
+instance_100_500_7_0_7.txt A
+instance_100_500_7_0_8.txt A
+instance_100_500_7_0_9.txt A
+testType:7 - 0 used 2494.69 ms
+instance_100_500_7_1_10.txt A
+instance_100_500_7_1_1.txt A
+instance_100_500_7_1_2.txt A
+instance_100_500_7_1_3.txt A
+instance_100_500_7_1_4.txt A
+instance_100_500_7_1_5.txt A
+instance_100_500_7_1_6.txt A
+instance_100_500_7_1_7.txt A
+instance_100_500_7_1_8.txt A
+instance_100_500_7_1_9.txt A
+testType:7 - 1 used 2169.97 ms
+instance_100_500_7_2_10.txt A
+instance_100_500_7_2_1.txt A
+instance_100_500_7_2_2.txt A
+instance_100_500_7_2_3.txt A
+instance_100_500_7_2_4.txt A
+instance_100_500_7_2_5.txt A
+instance_100_500_7_2_6.txt A
+instance_100_500_7_2_7.txt A
+instance_100_500_7_2_8.txt A
+instance_100_500_7_2_9.txt A
+testType:8 - 2 used 1870.27 ms
+instance_100_500_7_3_10.txt A
+instance_100_500_7_3_1.txt A
+instance_100_500_7_3_2.txt A
+instance_100_500_7_3_3.txt A
+instance_100_500_7_3_4.txt A
+instance_100_500_7_3_5.txt A
+instance_100_500_7_3_6.txt A
+instance_100_500_7_3_7.txt A
+instance_100_500_7_3_8.txt A
+instance_100_500_7_3_9.txt A
+testType:8 - 3 used 1590.93 ms
+instance_100_500_7_4_10.txt B
+instance_100_500_7_4_1.txt A
+instance_100_500_7_4_2.txt A
+instance_100_500_7_4_3.txt A
+instance_100_500_7_4_4.txt A
+instance_100_500_7_4_5.txt A
+instance_100_500_7_4_6.txt A
+instance_100_500_7_4_7.txt B
+instance_100_500_7_4_8.txt A
+instance_100_500_7_4_9.txt A
+testType:8 - 4 used 1341.36 ms
+instance_100_500_7_5_10.txt A
+instance_100_500_7_5_1.txt A
+instance_100_500_7_5_2.txt A
+instance_100_500_7_5_3.txt A
+instance_100_500_7_5_4.txt A
+instance_100_500_7_5_5.txt A
+instance_100_500_7_5_6.txt B
+instance_100_500_7_5_7.txt A
+instance_100_500_7_5_8.txt A
+instance_100_500_7_5_9.txt A
+testType:8 - 5 used 1101.7 ms
+instance_100_500_7_6_10.txt A
+instance_100_500_7_6_1.txt B
+instance_100_500_7_6_2.txt A
+instance_100_500_7_6_3.txt B
+instance_100_500_7_6_4.txt B
+instance_100_500_7_6_5.txt A
+instance_100_500_7_6_6.txt B
+instance_100_500_7_6_7.txt A
+instance_100_500_7_6_8.txt B
+instance_100_500_7_6_9.txt A
+testType:8 - 6 used 894.39 ms
+instance_100_500_7_7_10.txt A
+instance_100_500_7_7_1.txt B
+instance_100_500_7_7_2.txt A
+instance_100_500_7_7_3.txt B
+instance_100_500_7_7_4.txt B
+instance_100_500_7_7_5.txt B
+instance_100_500_7_7_6.txt B
+instance_100_500_7_7_7.txt A
+instance_100_500_7_7_8.txt A
+instance_100_500_7_7_9.txt A
+testType:8 - 7 used 686.878 ms
+instance_100_500_7_8_10.txt A
+instance_100_500_7_8_1.txt B
+instance_100_500_7_8_2.txt B
+instance_100_500_7_8_3.txt B
+instance_100_500_7_8_4.txt B
+instance_100_500_7_8_5.txt B
+instance_100_500_7_8_6.txt A
+instance_100_500_7_8_7.txt B
+instance_100_500_7_8_8.txt A
+instance_100_500_7_8_9.txt B
+testType:8 - 8 used 505.709 ms
+instance_100_500_8_0_10.txt A
+instance_100_500_8_0_1.txt A
+instance_100_500_8_0_2.txt A
+instance_100_500_8_0_3.txt A
+instance_100_500_8_0_4.txt A
+instance_100_500_8_0_5.txt A
+instance_100_500_8_0_6.txt A
+instance_100_500_8_0_7.txt A
+instance_100_500_8_0_8.txt A
+instance_100_500_8_0_9.txt A
+testType:8 - 0 used 2948.39 ms
+instance_100_500_8_1_10.txt A
+instance_100_500_8_1_1.txt A
+instance_100_500_8_1_2.txt A
+instance_100_500_8_1_3.txt A
+instance_100_500_8_1_4.txt A
+instance_100_500_8_1_5.txt A
+instance_100_500_8_1_6.txt A
+instance_100_500_8_1_7.txt A
+instance_100_500_8_1_8.txt A
+instance_100_500_8_1_9.txt A
+testType:9 - 1 used 2554.95 ms
+instance_100_500_8_2_10.txt A
+instance_100_500_8_2_1.txt A
+instance_100_500_8_2_2.txt A
+instance_100_500_8_2_3.txt A
+instance_100_500_8_2_4.txt A
+instance_100_500_8_2_5.txt A
+instance_100_500_8_2_6.txt A
+instance_100_500_8_2_7.txt A
+instance_100_500_8_2_8.txt A
+instance_100_500_8_2_9.txt A
+testType:9 - 2 used 2195.1 ms
+instance_100_500_8_3_10.txt A
+instance_100_500_8_3_1.txt A
+instance_100_500_8_3_2.txt B
+instance_100_500_8_3_3.txt A
+instance_100_500_8_3_4.txt A
+instance_100_500_8_3_5.txt A
+instance_100_500_8_3_6.txt B
+instance_100_500_8_3_7.txt A
+instance_100_500_8_3_8.txt A
+instance_100_500_8_3_9.txt A
+testType:9 - 3 used 1866.81 ms
+instance_100_500_8_4_10.txt A
+instance_100_500_8_4_1.txt A
+instance_100_500_8_4_2.txt A
+instance_100_500_8_4_3.txt A
+instance_100_500_8_4_4.txt A
+instance_100_500_8_4_5.txt A
+instance_100_500_8_4_6.txt A
+instance_100_500_8_4_7.txt A
+instance_100_500_8_4_8.txt A
+instance_100_500_8_4_9.txt A
+testType:9 - 4 used 1544.42 ms
+instance_100_500_8_5_10.txt A
+instance_100_500_8_5_1.txt A
+instance_100_500_8_5_2.txt A
+instance_100_500_8_5_3.txt A
+instance_100_500_8_5_4.txt A
+instance_100_500_8_5_5.txt A
+instance_100_500_8_5_6.txt A
+instance_100_500_8_5_7.txt B
+instance_100_500_8_5_8.txt A
+instance_100_500_8_5_9.txt B
+testType:9 - 5 used 1262.45 ms
+instance_100_500_8_6_10.txt A
+instance_100_500_8_6_1.txt B
+instance_100_500_8_6_2.txt B
+instance_100_500_8_6_3.txt A
+instance_100_500_8_6_4.txt B
+instance_100_500_8_6_5.txt B
+instance_100_500_8_6_6.txt A
+instance_100_500_8_6_7.txt B
+instance_100_500_8_6_8.txt A
+instance_100_500_8_6_9.txt B
+testType:9 - 6 used 1021.91 ms
+instance_100_500_8_7_10.txt B
+instance_100_500_8_7_1.txt A
+instance_100_500_8_7_2.txt A
+instance_100_500_8_7_3.txt B
+instance_100_500_8_7_4.txt A
+instance_100_500_8_7_5.txt A
+instance_100_500_8_7_6.txt A
+instance_100_500_8_7_7.txt B
+instance_100_500_8_7_8.txt B
+instance_100_500_8_7_9.txt B
+testType:9 - 7 used 771.586 ms
+instance_100_500_8_8_10.txt A
+instance_100_500_8_8_1.txt A
+instance_100_500_8_8_2.txt A
+instance_100_500_8_8_3.txt B
+instance_100_500_8_8_4.txt B
+instance_100_500_8_8_5.txt B
+instance_100_500_8_8_6.txt B
+instance_100_500_8_8_7.txt A
+instance_100_500_8_8_8.txt A
+instance_100_500_8_8_9.txt A
+testType:9 - 8 used 546.876 ms
+instance_100_500_9_0_10.txt A
+instance_100_500_9_0_1.txt A
+instance_100_500_9_0_2.txt A
+instance_100_500_9_0_3.txt A
+instance_100_500_9_0_4.txt A
+instance_100_500_9_0_5.txt A
+instance_100_500_9_0_6.txt A
+instance_100_500_9_0_7.txt A
+instance_100_500_9_0_8.txt A
+instance_100_500_9_0_9.txt A
+testType:10 - 0 used 3441.66 ms
+instance_100_500_9_1_10.txt A
+instance_100_500_9_1_1.txt A
+instance_100_500_9_1_2.txt A
+instance_100_500_9_1_3.txt A
+instance_100_500_9_1_4.txt A
+instance_100_500_9_1_5.txt A
+instance_100_500_9_1_6.txt A
+instance_100_500_9_1_7.txt A
+instance_100_500_9_1_8.txt A
+instance_100_500_9_1_9.txt A
+testType:10 - 1 used 2967.85 ms
+instance_100_500_9_2_10.txt A
+instance_100_500_9_2_1.txt A
+instance_100_500_9_2_2.txt A
+instance_100_500_9_2_3.txt A
+instance_100_500_9_2_4.txt A
+instance_100_500_9_2_5.txt A
+instance_100_500_9_2_6.txt A
+instance_100_500_9_2_7.txt A
+instance_100_500_9_2_8.txt A
+instance_100_500_9_2_9.txt A
+testType:10 - 2 used 2533.35 ms
+instance_100_500_9_3_10.txt A
+instance_100_500_9_3_1.txt A
+instance_100_500_9_3_2.txt A
+instance_100_500_9_3_3.txt A
+instance_100_500_9_3_4.txt A
+instance_100_500_9_3_5.txt B
+instance_100_500_9_3_6.txt A
+instance_100_500_9_3_7.txt A
+instance_100_500_9_3_8.txt A
+instance_100_500_9_3_9.txt A
+testType:10 - 3 used 2136.47 ms
+instance_100_500_9_4_10.txt A
+instance_100_500_9_4_1.txt A
+instance_100_500_9_4_2.txt A
+instance_100_500_9_4_3.txt A
+instance_100_500_9_4_4.txt B
+instance_100_500_9_4_5.txt A
+instance_100_500_9_4_6.txt A
+instance_100_500_9_4_7.txt A
+instance_100_500_9_4_8.txt A
+instance_100_500_9_4_9.txt A
+testType:10 - 4 used 1772.13 ms
+instance_100_500_9_5_10.txt A
+instance_100_500_9_5_1.txt B
+instance_100_500_9_5_2.txt A
+instance_100_500_9_5_3.txt A
+instance_100_500_9_5_4.txt A
+instance_100_500_9_5_5.txt A
+instance_100_500_9_5_6.txt A
+instance_100_500_9_5_7.txt A
+instance_100_500_9_5_8.txt B
+instance_100_500_9_5_9.txt A
+testType:10 - 5 used 1427.35 ms
+instance_100_500_9_6_10.txt A
+instance_100_500_9_6_1.txt A
+instance_100_500_9_6_2.txt A
+instance_100_500_9_6_3.txt A
+instance_100_500_9_6_4.txt B
+instance_100_500_9_6_5.txt B
+instance_100_500_9_6_6.txt B
+instance_100_500_9_6_7.txt A
+instance_100_500_9_6_8.txt B
+instance_100_500_9_6_9.txt B
+testType:10 - 6 used 1138.2 ms
+instance_100_500_9_7_10.txt B
+instance_100_500_9_7_1.txt B
+instance_100_500_9_7_2.txt B
+instance_100_500_9_7_3.txt B
+instance_100_500_9_7_4.txt B
+instance_100_500_9_7_5.txt A
+instance_100_500_9_7_6.txt B
+instance_100_500_9_7_7.txt A
+instance_100_500_9_7_8.txt B
+instance_100_500_9_7_9.txt B
+testType:10 - 7 used 875.081 ms
+instance_100_500_9_8_10.txt B
+instance_100_500_9_8_1.txt B
+instance_100_500_9_8_2.txt B
+instance_100_500_9_8_3.txt A
+instance_100_500_9_8_4.txt A
+instance_100_500_9_8_5.txt B
+instance_100_500_9_8_6.txt A
+instance_100_500_9_8_7.txt B
+instance_100_500_9_8_8.txt A
+instance_100_500_9_8_9.txt B
+testType:11 - 8 used 606.102 ms

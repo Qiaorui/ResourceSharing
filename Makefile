@@ -16,13 +16,19 @@ Preflow.o: Preflow.cpp
 	g++ -c Preflow.cpp
 
 test:
-	./main.exe -file input.in
+	./main.exe -sap -file input.in
 
-test_benchmark:
-	./main.exe -dir benchmark
+test_benchmark_sap:
+	./main.exe -sap -benchmark < files.in
 
-test_small:
-	./main.exe -dir smallTest
+test_benchmark_pre:
+	./main.exe -pre -benchmark < files.in
+
+test_small_sap:
+	./main.exe -sap -dir smallTest
+
+test_small_pre:
+	./main.exe -pre -dir -smallTest
 
 clean : 
 	rm -f *.o main.exe *~

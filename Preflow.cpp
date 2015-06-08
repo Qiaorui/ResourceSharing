@@ -223,7 +223,6 @@ int Preflow::setEdge(char **matrix, int s[], char key) {
 
 
 int Preflow::getMaxFlow() {
-    //cout << "maxH:" << h[t] << endl;
     return maxFlow;
 }
 
