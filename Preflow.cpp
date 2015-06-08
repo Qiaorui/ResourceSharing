@@ -1,13 +1,12 @@
 //
-// Created by qiaorui on 20/05/15.
+// Created by qiaorui on 7/06/15.
 //
 
 #include <iostream>
-#include <queue>
-#include "Sap.h"
+#include <string.h>
+#include "Preflow.h"
 
-
-Sap::Sap(int n, int m, int s, int t) {
+Preflow::Preflow(int n, int m, int s, int t) {
     this->n = n;
     this->m = m;
     this->s = s;
@@ -17,13 +16,13 @@ Sap::Sap(int n, int m, int s, int t) {
     for (int i = 0; i < totalNode; ++i) {
         capacidad[i] = new int[totalNode];
     }
-/*
+
     for (int i = 0; i < totalNode; ++i) {
         for (int j = 0; j < totalNode; ++j) {
             capacidad[i][j] = 0;
         }
     }
-*/
+
     flow = new int*[totalNode];
     for (int i = 0; i < totalNode; ++i) {
         flow[i] = new int[totalNode];
@@ -35,11 +34,17 @@ Sap::Sap(int n, int m, int s, int t) {
         }
     }
 
+    h = new int[totalNode];
+    e = new int[totalNode];
+    for (int i = 0; i < totalNode; ++i) {
+        h[i] = 0;
+        e[i] = 0;
+    }
     neighbour.resize(totalNode);
     parent = new int[totalNode];
 }
 
-Sap::~Sap() {
+Preflow::~Preflow() {
     for (int i = 0; i < totalNode; ++i) {
         delete[] capacidad[i];
     }
@@ -49,14 +54,126 @@ Sap::~Sap() {
     }
     delete[] flow;
     delete[] parent;
+    delete[] h;
+    delete[] e;
 }
 
-void Sap::addEdge(int s, int t, int c) {
+
+
+
+inline void Preflow::initPreflow() {
+
+    int c;
+    //cout << "init Preflow" << endl;
+    for (int i = 0; i < n; ++i) {
+        c = capacidad[0][i+1] - flow[0][i+1];
+        //cout << "c=" << c << "     c:"<< capacidad[0][i+1] << "    f:" << flow[0][i+1] << endl;
+        flow[0][i+1] += c;
+        flow[i+1][0] -= c;
+        e[0] -=c;
+        e[i+1]+=c;
+
+        //cout << "flow [0]["<<i+1<<"]=" << flow[0][i+1] << "   flow[i+1][0]="<< flow[i+1][0] << endl;
+        //cout << "e[" << i+1 << "] =" << e[i+1] << endl;
+    }
+}
+
+
+
+inline void Preflow::push(int u, int v) {
+    if (e[u] <= 0 || h[u] != h[v]+1) {
+        cout << "wrong push" << endl;
+        return;
+    }
+    int f = min(e[u], capacidad[u][v] - flow[u][v]);
+
+    //cout << "push: " << u << " to " << v << "   flow:" << f << endl;
+    flow[u][v] += f;
+    flow[v][u] -= f;
+    e[u] -= f;
+    e[v] += f;
+
+}
+
+inline bool Preflow::relable(int u) {
+    int height = INF;
+    for (int i = 0; i < neighbour[u].size(); ++i) {
+        int v = neighbour[u][i];
+        if (h[v] < height && capacidad[u][v]-flow[u][v]>0) {
+            height = h[v];
+        }
+    }
+    if (height == INF) {
+        return false;
+    }
+    h[u] = height + 1;
+    //cout << "relable: " << u << "-> h[" << u << "] = " << h[u] << endl;
+    return true;
+
+}
+
+
+void Preflow::solve() {
+    queue<int> activeNode;
+    bool inQueue[totalNode];
+    memset(inQueue,false,sizeof(inQueue));
+    int u,v;
+    bool canPush;
+    initPreflow();
+    for (int i = 1; i < n+1; ++i) {
+        if (e[i]> 0) {
+            activeNode.push(i);
+            inQueue[i] = true;
+        }
+
+    }
+    while (!activeNode.empty()) {
+        u = activeNode.front();
+        //cout << u << " -> " << endl;
+        canPush = false;
+
+        for (int i = 0; i < neighbour[u].size(); ++i) {
+            v = neighbour[u][i];
+            //cout << v << " r:" << capacidad[u][v]-flow[u][v] << "  h[" << v << "]: " << h[v] << "  e[" << u << "]:" << e[u] << endl;
+            if (capacidad[u][v]>flow[u][v] && h[u]==h[v]+1 && e[u]>0){
+                push(u,v);
+                canPush = true;
+                if (e[v]>0 && v != s && v != t && !inQueue[v]) {
+                    activeNode.push(v);
+                    inQueue[v] = true;
+                }
+                if (e[u] == 0) {
+                    activeNode.pop();
+                    inQueue[u] = false;
+                }
+
+            }
+        }
+        if (!canPush) {
+            if (!relable(u)){
+                break;
+            }
+        }
+    }
+
+    maxFlow = e[t];
+
+
+}
+
+void Preflow::addEdge(int s, int t, int c) {
     capacidad[s][t] = c;
 }
 
-int Sap::setEdge(char **matrix, int s[], char key) {
-    maxFlow = 0;
+int Preflow::setEdge(char **matrix, int s[], char key) {
+    e[t] = 0;
+    for (int i = 0; i < totalNode - 1; ++i) {
+        e[i] = 0;
+        h[i] = 0;
+    }
+
+    h[t] = 0;
+    h[this->s] = totalNode;
     int reserved = 0;
     for (int j = 0; j < m; ++j) {
         capacidad[n+j+1][t] = 1;
@@ -67,6 +184,7 @@ int Sap::setEdge(char **matrix, int s[], char key) {
     }
     for (int i = 0; i < n; ++i) {
         capacidad[0][i+1] = s[i];
+        capacidad[i+1][0] = -s[i]; //preflow!!!!!!
         flow[0][i+1] = 0;
         flow[i+1][0] = 0;
         neighbour[0].push_back(i+1);
@@ -84,12 +202,15 @@ int Sap::setEdge(char **matrix, int s[], char key) {
                 if (matrix[i][j] == '3' && key == 'A') {
                     capacidad[i+1][n+j+1] = 1;
                     //capacidad[0][i+1]--;
+                    h[n+j+1] = INF;
                     flow[0][i+1] = 1;
                     flow[i+1][0] = -1;
                     flow[i+1][n+j+1] = 1;
                     flow[n+j+1][i+1] = -1;
                     flow[n+j+1][t] = 1;
                     flow[t][n+j+1] = -1;
+                    e[t]++;
+                    //--e[i+1];
                     //neighbour[i+1].push_back(n+j+1);
                     //neighbour[n+j+1].push_back(i+1);
                     ++reserved;
@@ -109,71 +230,15 @@ int Sap::setEdge(char **matrix, int s[], char key) {
 }
 
 
-int Sap::bfs() {
 
 
-
-
-    for (int i = 0; i < totalNode; ++i) {
-        parent[i] = -1;
-    }
-    parent[s] = -2;
-    int M[totalNode];
-    M[s] = INF;
-    queue<int> q;
-    q.push(s);
-    int u;
-    while (!q.empty()) {
-        u = q.front();
-        //cout << "u->" << u << endl;
-        q.pop();
-        for (int i = 0; i < neighbour[u].size(); ++i) {
-            int v = neighbour[u][i];
-            //if (h[u]+1 > h[v]) h[v] = h[u]+1;
-            //cout << "v->" << v <<  "  R->" << capacidad[u][v] - flow[u][v] << "    P->" << parent[v] <<endl;
-            if (capacidad[u][v] - flow[u][v] > 0 && parent[v] == -1) {
-                parent[v] = u;
-                M[v] = min(M[u],capacidad[u][v] - flow[u][v]);
-                //cout << "M[v]" << M[v] << endl;
-                if (v != t) {
-                    q.push(v);
-                } else {
-                    //cout << "ok" << endl;
-                    return M[t];
-                }
-            }
-        }
-    }
-    return 0;
-}
-
-void Sap::solve() {
-    int f,u,v;
-    //h.assign(totalNode,0);
-    while(true) {
-        f = bfs();
-        //cout << "f->" << f << endl;
-        if (f == 0) {
-            break;
-        }
-        maxFlow += f;
-        v = t;
-        while(v != s) {
-            u = parent[v];
-            flow[u][v] += f;
-            flow[v][u] -= f;
-            v = u;
-        }
-    }
-}
-
-int Sap::getMaxFlow() {
+int Preflow::getMaxFlow() {
     //cout << "maxH:" << h[t] << endl;
     return maxFlow;
 }
 
 
-void Sap::coutAssign() {
+void Preflow::coutAssign() {
     bool find = false;
     for (int j = 0; j < m; ++j) {
         for (int i = 0; i < n; ++i) {
@@ -186,7 +251,7 @@ void Sap::coutAssign() {
     cout << endl;
 }
 
-void Sap::coutCapacity() {
+void Preflow::coutCapacity() {
 
     for (int i = 0; i < totalNode ; ++i) {
         for (int j = 0; j < totalNode; ++j) {
@@ -198,7 +263,7 @@ void Sap::coutCapacity() {
 }
 
 
-bool Sap::isCorrect(int minS[], int maxS[], char **matrix, char key) {
+bool Preflow::isCorrect(int minS[], int maxS[], char **matrix, char key) {
     //checking if A get all his preference
     if (key == 'A') {
         for (int i = 0; i < n; ++i) {
@@ -225,7 +290,7 @@ bool Sap::isCorrect(int minS[], int maxS[], char **matrix, char key) {
     return true;
 }
 
-bool Sap::filled() {
+bool Preflow::filled() {
     for (int i = 0; i < n; ++i) {
         if (capacidad[0][i+1] - flow[0][i+1] > 0) {
             return false;
@@ -233,3 +298,15 @@ bool Sap::filled() {
     }
     return true;
 }
+
+
+
+
+
+
+
+
+
+
+
+

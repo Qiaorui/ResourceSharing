@@ -1,4 +1,3 @@
-./main.exe -dir benchmark
 instance_100_500_2_0_1.txt
 A
 instance_100_500_2_0_10.txt
@@ -1439,7 +1438,3 @@ instance_100_500_9_8_8.txt
 A
 instance_100_500_9_8_9.txt
 B
-time for read input:   740.03 ms      ratio:0.897788%
-time for calc S:   214.989 ms      ratio:0.26082%
-time for sap algoritm:   81280 ms      ratio:98.6072%
-time total:   82428.1 ms

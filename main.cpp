@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <fstream>
 #include "Sap.h"
+#include "Preflow.h"
 
 using namespace std;
 
@@ -159,24 +160,13 @@ inline void buildModel(string source) {
 */
     clock_t sap_start = clock();
     time_calS += diffclock(sap_start,calS_start);
-    Sap sap;
-    sap.setValue(n,m,0,n+m+1);
+    Sap sap(n,m,0,n+m+1);
     while (bestCase != 'D') {
         int reserved = sap.setEdge(matrix, minS, bestCase);
         sap.solve();
-        /*
-        cout << "bestcase = " << bestCase << "   sumMin=" << sumMin << "    maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved  << "  debt=" << debt<< endl;
-        if (bestCase == 'A' && sumMin > sap.getMaxFlow() + reserved - debt) {
-            cout << "NOT EQUAL" << endl;
-            ++bestCase;
-            continue;
-        }
-        if (bestCase != 'A' && sumMin != sap.getMaxFlow() + reserved) {
-            cout << "error" << endl;
-            ++bestCase;
-            continue;
-        }
-         */
+
+        cout << "bestcase = " << bestCase << "    maxflow = " << sap.getMaxFlow() << "    reserved: " << reserved  <<  endl;
+
         if (!sap.filled()) {
             ++bestCase;
             cout << "lower case into ->" << bestCase << endl;
@@ -188,7 +178,7 @@ inline void buildModel(string source) {
             }
         }
         sap.solve();
-        //cout << "maxflow = " << sap.getMaxFlow() << endl;
+        cout << "maxflow = " << sap.getMaxFlow() << endl;
         if (sap.getMaxFlow() + reserved == m) {
             break;
         } else {
@@ -209,17 +199,160 @@ inline void buildModel(string source) {
         sap.setEdge(n+j+1,n+m+1,1);
     }
      */
-    /*
+    
     if (bestCase != 'D') {
         if (!sap.isCorrect(minS, maxS, matrix, bestCase)) {
             cout << "Wrong!" << endl;
             exit(1);
-        } else cout << "checked" << endl;
+        }
     }
-     */
+     
     cout << bestCase << endl;
-    //sap.coutAssign();
-    //cout << "maxflow = " << sap.getMaxFlow() << endl;
+    sap.coutAssign();
+    cout << "maxflow = " << sap.getMaxFlow() << endl;
+    for (int i = 0; i < n; ++i) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+    time_sap += diffclock(clock(),sap_start);
+}
+
+inline void buildPreflowModel(string source) {
+
+
+    clock_t read_start = clock();
+    char bestCase = 'A';
+    int n;
+    int m;
+    const char *file = source.c_str();
+    ifstream fin(file,ios::in|ios::binary);
+    if(!fin.is_open()) {
+        cout<<"Could not open the file "<<file<<endl;
+        cout<<"Program terminating.\n";
+        exit(EXIT_FAILURE);
+    }
+    fin >> n >> m;
+    char **matrix;
+    matrix = new char*[n];
+    for (int i = 0; i < n; ++i) {
+        matrix[i] = new char[m];
+    }
+    char majorPreference[m];
+    memset(majorPreference, '0', sizeof(majorPreference));
+    float numberOfPassengerByTrip[m];
+    memset(numberOfPassengerByTrip,0, sizeof(numberOfPassengerByTrip));
+    int sumPreference[n];
+    memset(sumPreference,0, sizeof(sumPreference));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            fin >> matrix[i][j];
+            //cout << matrix[i][j] << " ";
+            if (matrix[i][j] != '0') {
+                ++numberOfPassengerByTrip[j];
+                if (bestCase == 'A' && matrix[i][j] == '3') {
+                    if (majorPreference[j] == '3') {
+                        bestCase = 'B';
+                    }
+                    ++sumPreference[i];
+                }
+                if (matrix[i][j] > majorPreference[j]) {
+                    majorPreference[j] = matrix[i][j];
+                }
+            }
+        }
+        //cout << endl;
+    }
+    fin.close();
+
+    clock_t calS_start = clock();
+    time_read += diffclock(calS_start,read_start);
+    int minS[n];
+
+    int maxS[n];
+    float result;
+    for (int i = 0; i < n; ++i) {
+        result = 0;
+        for (int j = 0; j < m; ++j) {
+            if (matrix[i][j] != '0') {
+                result += 1/numberOfPassengerByTrip[j];
+            }
+        }
+        minS[i] = (int)result;
+        //sumMin += minS[i];
+        if (minS[i] == result) {
+            maxS[i] = minS[i];
+        } else {
+            maxS[i] = minS[i]+1;
+        }
+        if (sumPreference[i] > maxS[i]) {
+            bestCase = 'B';
+        }
+
+    }
+    //analisi
+    char minor = '9' ;
+    for (int j = 0; j < m; ++j) {
+        if (majorPreference[j] < minor) {
+            minor = majorPreference[j];
+        }
+    }
+    if (minor == '0') {
+        bestCase = 'D';
+    } else if (minor == '1') {
+        bestCase = 'C';
+    }
+
+
+/*
+    for (int i = 0; i < n; ++i) {
+        cout << "minS[" << i << "]: " << minS[i]<< "           ";
+        cout << "maxS[" << i << "]: " << maxS[i]<< endl;
+    }
+*/
+    clock_t sap_start = clock();
+    time_calS += diffclock(sap_start,calS_start);
+    Preflow preflow(n,m,0,n+m+1);
+    while (bestCase != 'D') {
+        int reserved = preflow.setEdge(matrix, minS, bestCase);
+        for (int i = 0; i < n; ++i) {
+            if (maxS[i] != minS[i]) {
+                preflow.addEdge(0,i+1,maxS[i]);
+            }
+        }
+       /* preflow.solve();
+        cout << "bestcase = " << bestCase << "    maxflow = " << preflow.getMaxFlow() << "    reserved: " << reserved  << endl;
+        preflow.coutAssign();*/
+        /*if (!preflow.filled()) {
+            ++bestCase;
+            cout << "1.lower case into ->" << bestCase << endl;
+            continue;
+        }*/
+        /*for (int i = 0; i < n; ++i) {
+            if (maxS[i] != minS[i]) {
+                preflow.addEdge(0,i+1,maxS[i]);
+            }
+        }*/
+        preflow.solve();
+        //cout << "maxflow = " << preflow.getMaxFlow() << endl;
+        if (preflow.getMaxFlow()  == m) {
+            break;
+        } else {
+            ++bestCase;
+            cout << "2. lower case into ->" << bestCase << endl;
+        }
+    }
+    cout << bestCase << endl;
+    //preflow.coutAssign();
+    if (bestCase != 'D') {
+        if (!preflow.isCorrect(minS, maxS, matrix, bestCase)) {
+            cout << "Wrong!" << endl;
+            exit(1);
+        }
+    }
+
+
+
+    //cout << "maxflow = " << preflow.getMaxFlow() << endl;
     for (int i = 0; i < n; ++i) {
         delete[] matrix[i];
     }
@@ -254,7 +387,7 @@ int main(int argc, char * argv[]) {
     }
     for (int i = 0; i < files.size(); ++i) {
         cout << files[i] << endl;
-        buildModel(dir+files[i]);
+        buildPreflowModel(dir+files[i]);
     }
     time_total = diffclock(clock(),start);
     cout << "time for read input:   " << time_read << " ms      ratio:" << time_read/time_total*100 << "%" << endl;

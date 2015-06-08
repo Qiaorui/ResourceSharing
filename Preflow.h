@@ -1,16 +1,18 @@
 //
-// Created by qiaorui on 20/05/15.
+// Created by qiaorui on 7/06/15.
 //
-#ifndef A_SAP_H
-#define A_SAP_H
+
+#ifndef A_PREFLOW_H
+#define A_PREFLOW_H
 #include <vector>
+#include <queue>
 using namespace std;
 
 typedef vector< vector<int> > Matrix;
-#define INF 1<<29;
+#define INF 1<<29
 
-class Sap {
-protected:
+class Preflow {
+private:
     int n;
     int m;
     int totalNode;
@@ -20,13 +22,22 @@ protected:
     int *parent;
     int **capacidad;
     int **flow;
+    int *h;
+    int *e;
     Matrix neighbour;
 
 public:
+    Preflow(int n, int m, int s, int t);
 
-    Sap(int n, int m, int s, int t);
+    ~Preflow();
 
-    ~Sap();
+    void push(int u, int v);
+
+    bool relable(int u);
+
+    void solve();
+
+    void initPreflow();
 
     void coutCapacity();
 
@@ -41,13 +52,13 @@ public:
     int setEdge(char **matrix, int s[], char key);
 
 
-
     int getMaxFlow();
 
     bool filled();
-    virtual int bfs();
-    virtual void solve();
+
+
+
 };
 
 
-#endif //A_SAP_H
+#endif //A_PREFLOW_H
