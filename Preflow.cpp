@@ -81,10 +81,6 @@ inline void Preflow::initPreflow() {
 
 
 inline void Preflow::push(int u, int v) {
-    if (e[u] <= 0 || h[u] != h[v]+1) {
-        cout << "wrong push" << endl;
-        return;
-    }
     int f = min(e[u], capacidad[u][v] - flow[u][v]);
 
     //cout << "push: " << u << " to " << v << "   flow:" << f << endl;
@@ -104,6 +100,7 @@ inline bool Preflow::relable(int u) {
         }
     }
     if (height == INF) {
+        //cout << "relable: " << u << "-> h[" << u << "] = " << h[u] << " cant relable " <<endl;
         return false;
     }
     h[u] = height + 1;
@@ -132,7 +129,7 @@ void Preflow::solve() {
         //cout << u << " -> " << endl;
         canPush = false;
 
-        for (int i = 0; i < neighbour[u].size(); ++i) {
+        for (int i = 0; i < neighbour[u].size() && e[u]>0; ++i) {
             v = neighbour[u][i];
             //cout << v << " r:" << capacidad[u][v]-flow[u][v] << "  h[" << v << "]: " << h[v] << "  e[" << u << "]:" << e[u] << endl;
             if (capacidad[u][v]>flow[u][v] && h[u]==h[v]+1 && e[u]>0){
@@ -146,7 +143,6 @@ void Preflow::solve() {
                     activeNode.pop();
                     inQueue[u] = false;
                 }
-
             }
         }
         if (!canPush) {
@@ -166,23 +162,22 @@ void Preflow::addEdge(int s, int t, int c) {
 }
 
 int Preflow::setEdge(char **matrix, int s[], char key) {
-    e[t] = 0;
-    for (int i = 0; i < totalNode - 1; ++i) {
+    for (int i = 0; i < totalNode ; ++i) {
         e[i] = 0;
-        h[i] = 0;
     }
-
-    h[t] = 0;
     h[this->s] = totalNode;
+    h[t]=0;
     int reserved = 0;
     for (int j = 0; j < m; ++j) {
         capacidad[n+j+1][t] = 1;
+        h[n+j+1] = 1;
         flow[n+j+1][t] = 0;
         flow[t][n+j+1] = 0;
         neighbour[n+j+1].push_back(t);
         neighbour[t].push_back(n+j+1);
     }
     for (int i = 0; i < n; ++i) {
+        h[i+1] = 2;
         capacidad[0][i+1] = s[i];
         capacidad[i+1][0] = -s[i]; //preflow!!!!!!
         flow[0][i+1] = 0;
@@ -203,8 +198,8 @@ int Preflow::setEdge(char **matrix, int s[], char key) {
                     capacidad[i+1][n+j+1] = 1;
                     //capacidad[0][i+1]--;
                     h[n+j+1] = INF;
-                    flow[0][i+1] = 1;
-                    flow[i+1][0] = -1;
+                    ++flow[0][i+1];
+                    --flow[i+1][0];
                     flow[i+1][n+j+1] = 1;
                     flow[n+j+1][i+1] = -1;
                     flow[n+j+1][t] = 1;
